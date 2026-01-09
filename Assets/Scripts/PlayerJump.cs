@@ -7,6 +7,7 @@ public class PlayerJump : MonoBehaviour
     [SerializeField] private float jumpForce = 6;
     [SerializeField] private Animator animator;
 
+
     public PlayerGroundCheck GroundCheck;
     void Update()
     {
