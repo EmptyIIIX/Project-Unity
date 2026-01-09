@@ -3,9 +3,12 @@ using UnityEngine.UIElements;
 
 public class PlayerJump : MonoBehaviour
 {
+    [Header("References")]
     [SerializeField] private Rigidbody2D rigidBody;
-    [SerializeField] private float jumpForce = 6;
     [SerializeField] private Animator animator;
+
+    [Header("Jump setting")]
+    [SerializeField] private float jumpForce = 6;
 
     public PlayerGroundCheck GroundCheck;
     void Update()

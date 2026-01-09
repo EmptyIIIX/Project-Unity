@@ -911,8 +911,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerJumpTest
   rigidBody: {fileID: 1251661196}
-  jumpForce: 8
   animator: {fileID: 1251661205}
+  jumpForce: 8
   GroundCheck: {fileID: 1251661200}
 --- !u!114 &1251661202
 MonoBehaviour:
@@ -926,9 +926,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e75bb51bdaedfe498ac9c1bf7d641c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement2D
-  speed: 5
-  SpriteRenderer: {fileID: 1251661198}
   animator: {fileID: 1251661205}
+  speed: 5
 --- !u!114 &1251661203
 MonoBehaviour:
   m_ObjectHideFlags: 0

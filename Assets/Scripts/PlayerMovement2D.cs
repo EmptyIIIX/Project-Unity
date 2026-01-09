@@ -2,51 +2,40 @@ using UnityEngine;
 
 public class PlayerMovement2D : MonoBehaviour
 {
-    [SerializeField] private float speed = 5f; // Horizontal speed
-    [SerializeField] private SpriteRenderer SpriteRenderer;
+    [Header("References")]
     [SerializeField] private Animator animator;
 
-    private Vector2 movement;
-    private float xPosLastFrame;// for collect last value of moveInput
+    [Header("Movement setting")]
+    [SerializeField] private float speed = 5f; // Horizontal speed
+
+    private float moveInput;
 
     void Update()
     {
-        MovementX();
-        FlipCharacterX();
+        ReadInput();
+        Movement();
+        FlipCharacter();
+        UpdateAnimation();
     }
-
-    private void MovementX()
+    private void ReadInput()
     {
-        // 1) Read horizontal input (A/D or Left/Right arrows)
-        float moveInput = Input.GetAxisRaw("Horizontal");
-        movement.x = moveInput * speed * Time.deltaTime;
+        moveInput = Input.GetAxisRaw("Horizontal");
+    }
+    private void Movement()
+    {
+        Vector3 movement = new Vector3(moveInput * speed * Time.deltaTime, 0f, 0f);
         transform.Translate(movement);
-
-        // 2) check isRunning to animation
-        if (moveInput != 0)
-        {
-            animator.SetBool("isRunning", true);
-        }
-        else
-        {
-            animator.SetBool("isRunning", false);
-        }
     }
-    private void FlipCharacterX()
+    private void FlipCharacter()
     {
-        float moveInput = Input.GetAxisRaw("Horizontal");
+        if (moveInput == 0) return;
 
-        if (moveInput > 0 && (transform.position.x > xPosLastFrame))
-        {
-            //player is moving right
-            SpriteRenderer.flipX = false;
-        }
-        else if(moveInput < 0 && (transform.position.x < xPosLastFrame))
-        {
-            //player is moving left
-            SpriteRenderer.flipX = true;
-        }
-
-        xPosLastFrame = transform.position.x;
+        Vector3 scale = transform.localScale;
+        scale.x = Mathf.Sign(moveInput) * Mathf.Abs(scale.x);
+        transform.localScale = scale;
+    }
+    private void UpdateAnimation()
+    {
+        animator.SetBool("isRunning", moveInput != 0);
     }
 }
