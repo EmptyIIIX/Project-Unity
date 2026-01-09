@@ -1,12 +1,13 @@
 using UnityEngine;
 public sealed class PlayerFSMController : MonoBehaviour
 {
-    [Header("Refs")]
+    [Header("Reference")]
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private PlayerInputReader input;
     [SerializeField] private PlayerGroundCheck ground;
     [SerializeField] private LadderChecker ladder;
-    [Header("Tuning")]
+
+    [Header("FSM Control")]
     [SerializeField] private float moveSpeed = 6f;
     [SerializeField] private float jumpImpulse = 12f;
     [SerializeField] private float climbSpeed = 4f;
