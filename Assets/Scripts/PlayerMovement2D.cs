@@ -2,34 +2,51 @@ using UnityEngine;
 
 public class PlayerMovement2D : MonoBehaviour
 {
-    public float moveSpeed = 5f; // Horizontal speed
-    public float jumpForce = 7f; // Upward impulse for jump
-    public PlayerGroundCheck groundCheck; // Reference to your GroundCheck script
-    private Rigidbody2D rb;
-    private float moveInput; // -1, 0, or +1 from keyboard
-    void Awake()
-    {
-        rb = GetComponent<Rigidbody2D>();
-    }
+    [SerializeField] private float speed = 5f; // Horizontal speed
+    [SerializeField] private SpriteRenderer SpriteRenderer;
+    [SerializeField] private Animator animator;
+
+    private Vector2 movement;
+    private float xPosLastFrame;// for collect last value of moveInput
+
     void Update()
     {
+        MovementX();
+        FlipCharacterX();
+    }
+
+    private void MovementX()
+    {
         // 1) Read horizontal input (A/D or Left/Right arrows)
-        moveInput = Input.GetAxisRaw("Horizontal");
-        // 2) Jump only when grounded
-        if (groundCheck != null && groundCheck.IsGrounded)
+        float moveInput = Input.GetAxisRaw("Horizontal");
+        movement.x = moveInput * speed * Time.deltaTime;
+        transform.Translate(movement);
+
+        // 2) check isRunning to animation
+        if (moveInput != 0)
         {
-            // "Jump" is mapped to Space by default in the old Input Manager
-            if (Input.GetButtonDown("Jump"))
-            {
-                // Reset vertical velocity to make jump consistent
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
-                rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            }
+            animator.SetBool("isRunning", true);
+        }
+        else
+        {
+            animator.SetBool("isRunning", false);
         }
     }
-    void FixedUpdate()
+    private void FlipCharacterX()
     {
-        // Apply horizontal movement in physics step
-        rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
+        float moveInput = Input.GetAxisRaw("Horizontal");
+
+        if (moveInput > 0 && (transform.position.x > xPosLastFrame))
+        {
+            //player is moving right
+            SpriteRenderer.flipX = false;
+        }
+        else if(moveInput < 0 && (transform.position.x < xPosLastFrame))
+        {
+            //player is moving left
+            SpriteRenderer.flipX = true;
+        }
+
+        xPosLastFrame = transform.position.x;
     }
 }
