@@ -945,8 +945,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerJumpTest
   rigidBody: {fileID: 1251661196}
   animator: {fileID: 1251661205}
-  jumpForce: 8
   GroundCheck: {fileID: 1251661200}
+  jumpForce: 8
+  jumpCutMultiplier: 2.5
+  fallMultiplier: 1
 --- !u!114 &1251661202
 MonoBehaviour:
   m_ObjectHideFlags: 0
