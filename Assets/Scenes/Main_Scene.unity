@@ -962,7 +962,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement2D
   animator: {fileID: 1251661205}
+  rb: {fileID: 1251661196}
   speed: 5
+  dashDistance: 2
+  dashDuration: 0.1
+  cooldownDash: 1
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &1251661203
 MonoBehaviour:
   m_ObjectHideFlags: 0
