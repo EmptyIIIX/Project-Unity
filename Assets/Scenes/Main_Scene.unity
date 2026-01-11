@@ -966,7 +966,7 @@ MonoBehaviour:
   speed: 5
   dashDistance: 2
   dashDuration: 0.1
-  cooldownDash: 1
+  cooldownDash: 0.6
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
