@@ -32,7 +32,7 @@ public class PlayerCombat : MonoBehaviour
         foreach(Collider2D enemy in enemiesToDamage)
         {
             //for class enemy
-            // enemy.GetComponent<Enemy>()?.TakeDamage(damage);
+             enemy.GetComponent<EnemyBase>()?.TakeDamage(damage);
         }
 
         timeBtwAttack = startTimeBtwAttack;
