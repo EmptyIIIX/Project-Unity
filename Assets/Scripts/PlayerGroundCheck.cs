@@ -4,11 +4,15 @@ public sealed class PlayerGroundCheck : MonoBehaviour
 {
     [Header("References")]
     public Transform groundCheck;
+    public PhysicsMaterial2D PhyMat;
 
     [Header("Ground Check Control")]
     public float checkRadius = 0.15f;
     public LayerMask groundLayer;
+    public LayerMask platformLayer;
+    public LayerMask clingLayer;
     public bool IsGrounded;
+    public bool IsClingable;
 
     void Update()
     {
@@ -17,6 +21,12 @@ public sealed class PlayerGroundCheck : MonoBehaviour
             checkRadius,
             groundLayer
         );
+
+        IsClingable = Physics2D.OverlapCircle(
+            groundCheck.position,
+            checkRadius,
+            clingLayer
+            );
     }
     void OnDrawGizmosSelected()
     {

@@ -12,10 +12,11 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Clingable
+  - Wall
   - Ground
   - Enemy
+  - Platform
   - 
   - 
   - 
@@ -25,8 +26,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - character
   - 
   - 
   - 
