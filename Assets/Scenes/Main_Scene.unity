@@ -757,6 +757,8 @@ GameObject:
   - component: {fileID: 1251661203}
   - component: {fileID: 1251661204}
   - component: {fileID: 1251661206}
+  - component: {fileID: 1251661207}
+  - component: {fileID: 1251661208}
   - component: {fileID: 1251661205}
   m_Layer: 0
   m_Name: Player
@@ -863,7 +865,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 7bc924f785d1caa409aa7cb785b8ef5a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1047,6 +1049,74 @@ MonoBehaviour:
   animator: {fileID: 1251661205}
   attackRange: 0.45
   damage: 1
+--- !u!114 &1251661207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1251661195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a34ef50cef5b39c48af00832944b1b1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TestFlash
+--- !u!114 &1251661208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1251661195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a0c0860848a896428003b249188ee36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DamgeFlash
+  _flashColor: {r: 64, g: 64, b: 64, a: 1}
+  _flashTime: 0.25
+  _flashSpeedCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: -22.940212
+      outSlope: -22.940212
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.041457508
+      value: 0.048955977
+      inSlope: -6.8713446
+      outSlope: -6.8713446
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.14775313
+      value: 1.0266125
+      inSlope: -0.4215026
+      outSlope: -0.4215026
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.25
+      value: 0
+      inSlope: -10.040528
+      outSlope: -10.040528
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1547445985
 GameObject:
   m_ObjectHideFlags: 0
