@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     public int health;
-    public int maxHealth = 10;
+    public int maxHealth = 3;
 
     public SpriteRenderer playerSr;
     public PlayerMovement2D playerMovement;

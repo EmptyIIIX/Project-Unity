@@ -7,11 +7,13 @@ public class EnemyBase : MonoBehaviour
     private Rigidbody2D rb;
     [SerializeField] private Transform player;
     [SerializeField] private EnemyDetector detector;
+    public PlayerHealth playerHealth;
 
     [Header("Enemy states")]
     public int health = 3;
     public float speed = 2f;
     public float knockbackForce = 5f;
+    public int damage = 1;
 
     private bool isKnockback;
     void Start()
@@ -92,5 +94,13 @@ public class EnemyBase : MonoBehaviour
     {
         //animator.SetTrigger("Die");
         Destroy(gameObject, 0.5f);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            playerHealth.TakeDamage(damage);
+        }
     }
 }

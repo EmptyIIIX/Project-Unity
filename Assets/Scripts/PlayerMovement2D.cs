@@ -86,17 +86,6 @@ public class PlayerMovement2D : MonoBehaviour
 
         isDashing = false;
     }
-    //private void Dash()
-    //{
-    //    if(Input.GetButtonDown("Fire2"))
-    //    {
-    //        Vector2 dash = new Vector2(moveInput * dashDistance, 0f);
-    //        transform.Translate(dash);
-
-    //        animator.SetTrigger("Dash");
-    //        timeCooldown = cooldownDash;
-    //    }
-    //}
     private void FlipCharacter()
     {
         if (moveInput == 0) return;
