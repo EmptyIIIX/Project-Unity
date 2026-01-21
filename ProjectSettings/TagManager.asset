@@ -6,6 +6,7 @@ TagManager:
   tags:
   - roomActive
   - Enemy
+  - Ground
   layers:
   - Default
   - TransparentFX
