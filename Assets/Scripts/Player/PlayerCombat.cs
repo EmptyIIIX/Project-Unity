@@ -54,31 +54,5 @@ public class PlayerCombat : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackPos.position, attackRange);
     }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
-            CollideWithEnemy(collision);
-        }
-    }
-    private void CollideWithEnemy(Collision2D collision)
-    {
-        if (Physics2D.Raycast(transform.position, Vector2.down, halfHeight + 0.1f, LayerMask.GetMask("Enemy")))
-        {
-            // hit enemy top (step on enemy's head)
-            Vector2 velocity = rigidBody.linearVelocity;
-            velocity.y = 0f;
-            rigidBody.linearVelocity = velocity;
-            rigidBody.AddForce(Vector2.up * bounceForce, ForceMode2D.Impulse);
-        }
-        else
-        {
-
-        }
-    }
-    public void KnockbackPlayer(Vector2 knockbackForce, int direction)
-    {
-
-    }
 
 }

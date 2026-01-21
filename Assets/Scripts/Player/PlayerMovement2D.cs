@@ -9,6 +9,7 @@ public class PlayerMovement2D : MonoBehaviour
 
     [Header("Movement setting")]
     [SerializeField] private float speed = 5f; // Horizontal speed
+    [SerializeField] private float knockbackDuration = 0.2f;//      test
 
     [Header("Dash Settings")]
     [SerializeField] private float dashDistance = 2;
@@ -19,9 +20,27 @@ public class PlayerMovement2D : MonoBehaviour
     private float moveInput;
     private bool isDashing;
     private float dashCooldownTimer;
+    private float knockbackDelay;
+
+    //test
+    private float knockbackTimer;
+    private bool isKnockback;
 
     void Update()
     {
+        //test
+        if (isKnockback)
+        {
+            knockbackTimer -= Time.deltaTime;
+
+            if(knockbackTimer <= 0)
+            {
+                isKnockback = false;
+            }
+
+            return;
+        }
+        //---
         ReadInput();
         HandleDash();
         FlipCharacter();
@@ -29,10 +48,18 @@ public class PlayerMovement2D : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (!isDashing)
-        {
-            Movement();
-        }
+        if (isKnockback || isDashing) return;
+
+        Movement();
+        //if(knockbackDelay > 0f)
+        //{
+        //    knockbackDelay -= Time.fixedDeltaTime;
+        //    return;
+        //}
+        //else if (!isDashing)
+        //{
+        //    Movement();
+        //}
     }
     private void ReadInput()
     {
@@ -40,10 +67,30 @@ public class PlayerMovement2D : MonoBehaviour
     }
     private void Movement()
     {
-        rb.linearVelocity = new Vector2(moveInput * speed, rb.linearVelocityY); ;
+        rb.linearVelocity = new Vector2(moveInput * speed, rb.linearVelocityY);
         //Vector3 movement = new Vector3(moveInput * speed * Time.deltaTime, 0f, 0f);
         //transform.Translate(movement);
     }
+    public void KnockbackPlayer(Vector2 knockbackForce, int direction)
+    {
+        isKnockback = true;
+        knockbackTimer = knockbackDuration;
+
+        Vector2 force = knockbackForce;
+        force.x *= direction;
+
+        rb.linearVelocity = Vector2.zero;
+        rb.angularVelocity = 0f;
+        rb.AddForce(force, ForceMode2D.Impulse);
+    }
+    //public void KnockbackPlayer(Vector2 knockbackForce, int direction, float delay)
+    //{
+    //    knockbackDelay = delay;
+    //    knockbackForce.x *= direction;
+    //    rb.linearVelocity = Vector2.zero;
+    //    rb.angularVelocity = 0f;
+    //    rb.AddForce(knockbackForce, ForceMode2D.Impulse);
+    //}
     private void  HandleDash()
     {
         if(dashCooldownTimer > 0)

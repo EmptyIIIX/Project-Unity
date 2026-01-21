@@ -7,7 +7,7 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rigidBody;
     [SerializeField] private SpriteRenderer spriteRenderer;
 
-    [Header("Enemy states")]
+    [Header("Enemy movement")]
     [SerializeField] private float speed = 3f;
     [SerializeField] private int startDirection = 1;
     [SerializeField] private bool stayOnLedges = true;
@@ -17,6 +17,7 @@ public class EnemyMovement : MonoBehaviour
     private float halfHeight;
     private Vector2 movement;
     private bool isGrounded;
+    private float movementDelay;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -30,6 +31,12 @@ public class EnemyMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if(movementDelay > 0f)
+        {
+            movementDelay -= Time.fixedDeltaTime;
+            return;
+        }
+
         movement.x = speed * currentDirection;
         movement.y = rigidBody.linearVelocityY;
         rigidBody.linearVelocity = movement;
@@ -50,6 +57,14 @@ public class EnemyMovement : MonoBehaviour
     private void OnCollisionExit2D(Collision2D collision)
     {
         isGrounded = false;
+    }
+    public void KnockbackEnemy(Vector2 knockbackForce, int direction, float delay)
+    {
+        movementDelay = delay;
+        knockbackForce.x *= direction;
+        rigidBody.linearVelocity = Vector2.zero;
+        rigidBody.angularVelocity = 0f;
+        rigidBody.AddForce(knockbackForce, ForceMode2D.Impulse);
     }
     private void SetDirection()
     {
