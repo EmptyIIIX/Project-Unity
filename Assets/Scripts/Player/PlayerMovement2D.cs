@@ -22,13 +22,11 @@ public class PlayerMovement2D : MonoBehaviour
     private float dashCooldownTimer;
     private float knockbackDelay;
 
-    //test
     private float knockbackTimer;
     private bool isKnockback;
 
     void Update()
     {
-        //test
         if (isKnockback)
         {
             knockbackTimer -= Time.deltaTime;
@@ -40,7 +38,6 @@ public class PlayerMovement2D : MonoBehaviour
 
             return;
         }
-        //---
         ReadInput();
         HandleDash();
         FlipCharacter();
