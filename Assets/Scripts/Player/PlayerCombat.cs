@@ -3,6 +3,9 @@ using UnityEngine;
 public class PlayerCombat : MonoBehaviour
 {
     [SerializeField] private float timeBtwAttack;
+    [SerializeField] private SpriteRenderer playerSr;
+    [SerializeField] private Rigidbody2D rigidBody;
+    [SerializeField] private float bounceForce = 6f;
     public float startTimeBtwAttack;
 
     public Transform attackPos;
@@ -10,6 +13,13 @@ public class PlayerCombat : MonoBehaviour
     public Animator animator;
     public float attackRange;
     public int damage;
+
+    private float halfHeight;
+
+    private void Start()
+    {
+        halfHeight = playerSr.bounds.extents.y;
+    }
     void Update()
     {
         if(timeBtwAttack > 0)
@@ -32,7 +42,7 @@ public class PlayerCombat : MonoBehaviour
         foreach(Collider2D enemy in enemiesToDamage)
         {
             //for class enemy
-            // enemy.GetComponent<Enemy>()?.TakeDamage(damage);
+             enemy.GetComponent<EnemyBase>()?.TakeDamage(damage);
         }
 
         timeBtwAttack = startTimeBtwAttack;
@@ -44,4 +54,5 @@ public class PlayerCombat : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackPos.position, attackRange);
     }
+
 }

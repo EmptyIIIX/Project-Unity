@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 3
   tags:
   - roomActive
+  - Enemy
+  - Ground
   layers:
   - Default
   - TransparentFX
@@ -12,10 +14,11 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Clingable
+  - Wall
   - Ground
   - Enemy
+  - Platform
   - 
   - 
   - 
@@ -25,8 +28,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - Player
   - 
   - 
   - 
