@@ -47,8 +47,17 @@ TagManager:
   - name: Lense
     uniqueID: 2019058321
     locked: 0
-  - name: New Layer 2
+  - name: BG
     uniqueID: 859775979
+    locked: 0
+  - name: MG
+    uniqueID: 1194070883
+    locked: 0
+  - name: Player
+    uniqueID: 826713455
+    locked: 0
+  - name: FG
+    uniqueID: 4020492311
     locked: 0
   m_RenderingLayers:
   - Default

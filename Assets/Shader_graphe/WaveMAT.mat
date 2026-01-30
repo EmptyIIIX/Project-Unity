@@ -42,8 +42,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _DistanceWave: 1
-    - _Power: 2
+    - _DistanceWave: -0.1
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ShockWaveStrenght: -0.28

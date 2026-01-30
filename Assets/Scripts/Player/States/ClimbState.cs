@@ -13,7 +13,7 @@ public sealed class ClimbState : IPlayerState
     {
         Debug.Log($"[{_ctx.DebugTag}] Enter: Climb");
         _ctx.Rb.gravityScale = 0f;
-        _ctx.Rb.velocity = Vector2.zero;
+        _ctx.Rb.linearVelocity = Vector2.zero;
     }
     public void Tick(float dt)
     {
@@ -30,7 +30,7 @@ public sealed class ClimbState : IPlayerState
         //}
         // Movement on ladder (vertical only, simple)
         float vy = _ctx.ClimbSpeed * _ctx.Input.Vertical;
-        _ctx.Rb.velocity = new Vector2(0f, vy);
+        _ctx.Rb.linearVelocity = new Vector2(0f, vy);
         // If grounded and not pressing vertical, settle to Idle
         if (_ctx.Ground.IsGrounded && Mathf.Abs(_ctx.Input.Vertical) <= 0.01f)
         {

@@ -11,8 +11,8 @@ public sealed class IdleState : IPlayerState
     public void Enter()
     {
         Debug.Log($"[{_ctx.DebugTag}] Enter: Idle");
-        var v = _ctx.Rb.velocity;
-        _ctx.Rb.velocity = new Vector2(0f, v.y);
+        var v = _ctx.Rb.linearVelocity;
+        _ctx.Rb.linearVelocity = new Vector2(0f, v.y);
     }
     public void Tick(float dt)
     {
