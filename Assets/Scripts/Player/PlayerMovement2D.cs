@@ -38,6 +38,14 @@ public class PlayerMovement2D : MonoBehaviour
 
             return;
         }
+
+        //test die animation
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            animator.SetTrigger("Die");
+        }
+
+
         ReadInput();
         HandleDash();
         FlipCharacter();
