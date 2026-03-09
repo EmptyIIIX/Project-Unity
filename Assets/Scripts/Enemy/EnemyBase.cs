@@ -9,7 +9,7 @@ public class EnemyBase : MonoBehaviour
     [SerializeField] private EnemyDetector detector;
     public PlayerHealth playerHealth;
 
-    [Header("Enemy states")]
+    [Header("Enemy status")]
     public int health = 3;
     public float speed = 2f;
     public float knockbackForce = 5f;
