@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -16,6 +17,8 @@ public class PlayerAttack : MonoBehaviour
 
     public bool canReceiveInput;
     public bool inputReceived;
+
+    public static event Action HitEnemy;
 
     private void Awake()
     {
@@ -67,6 +70,7 @@ public class PlayerAttack : MonoBehaviour
         {
             //for class enemy
             enemy.GetComponent<EnemyGuardMovement>()?.TakeDamage(NormalAttackDamage);
+            HitEnemy.Invoke();
         }
 
         timeBtwAttack = startTimeBtwAttack;
