@@ -11,7 +11,8 @@ public class HoldToLoadLevel : MonoBehaviour
     private float holdTimer = 0;
     private bool isHolding = false;
 
-    public static event Action OnHoldComplete;
+    public int healAmount = 1;
+    public static event Action<int> OnHoldComplete;
 
     // Update is called once per frame
     void Update()
@@ -23,7 +24,10 @@ public class HoldToLoadLevel : MonoBehaviour
             if(holdTimer >= holdDuration)
             {
                 //Load next level
-                OnHoldComplete.Invoke();
+                //OnHoldComplete.Invoke();                  use this for gate to next level
+
+                //healing
+                OnHoldComplete.Invoke(healAmount);
                 ResetHold();
             }
         }

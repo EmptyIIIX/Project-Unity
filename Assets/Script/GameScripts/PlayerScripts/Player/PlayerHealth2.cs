@@ -19,6 +19,7 @@ public class PlayerHealth2 : MonoBehaviour
 
         spriteRenderer = GetComponent<SpriteRenderer>();
         GameController.OnReset += ResetHealth;
+        HoldToLoadLevel.OnHoldComplete += Heal;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -28,6 +29,17 @@ public class PlayerHealth2 : MonoBehaviour
         {
             TakeDamage(enemyGuard.damage);
         }
+    }
+
+    public void Heal(int amount)
+    {
+        currentHealth += amount;
+        if(currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+
+        healthUI.UpdateHearts(currentHealth);
     }
 
     void ResetHealth()

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering.Universal;
@@ -21,6 +22,13 @@ public class PlayerMovement2 : MonoBehaviour
     [Header("Movement")]
     public float moveSpeed = 5;
     public float horizontalMovement;
+
+    [Header("Dashing")]
+    public float dashSpeed = 20f;
+    public float dashDuration = 0.1f;
+    public float dashCooldown = 0.1f;
+    bool isDashing;
+    bool canDash = true;
 
     [Header("Jumping")]
     public float jumpForce = 5;
@@ -55,24 +63,28 @@ public class PlayerMovement2 : MonoBehaviour
     bool isWallJumping;
     float wallJumpDirection;
     float wallJumpTimer;
-    
 
     // Update is called once per frame
     void Update()
     {
+        if (isDashing) { return; }
+        if (PlayerAttack.Instance.isAttacking)
+        {
+            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+            return;
+        }
         PlayerInput();
         GroundCheck();
         Gravity();
         WallSlide();
         WallJump();
-
-        if(!isWallJumping)
+        if (!isWallJumping)
         {
             MoveHorizon();
             Flip();
         }
-
         UpdateAnim();
+        
     }
     private void PlayerInput()
     {
@@ -106,6 +118,35 @@ public class PlayerMovement2 : MonoBehaviour
     public void MoveHorizon()
     {
         rb.linearVelocity = new Vector2(horizontalMovement * moveSpeed, rb.linearVelocity.y);
+    }
+    public void Dash(InputAction.CallbackContext context)
+    {
+        if(context.performed && canDash)
+        {
+            StartCoroutine(DashCoroutine());
+        }
+    }
+
+    private IEnumerator DashCoroutine()
+    {
+        Physics2D.IgnoreLayerCollision(20, 9, true);
+        canDash = false;
+        isDashing = true;
+        animator.SetBool("isDashing?", true);
+
+        float dashDirection = isFacingRight ? 1f : -1f;
+
+        rb.linearVelocity = new Vector2(dashDirection * dashSpeed, rb.linearVelocity.y);
+
+        yield return new WaitForSeconds(dashDuration);
+
+        rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
+        
+        isDashing = false;
+        Physics2D.IgnoreLayerCollision(20, 9, false);
+
+        yield return new WaitForSeconds(dashCooldown);
+        canDash = true;
     }
 
     private void GroundCheck()
@@ -217,8 +258,18 @@ public class PlayerMovement2 : MonoBehaviour
             animator.SetBool("isRunning", false);
         }
 
+        //dashing
+        if(isDashing)
+        {
+            animator.SetBool("isDashing?", true);
+        }
+        else
+        {
+            animator.SetBool("isDashing?", false);
+        }
+
         //jumping
-        if(rb.linearVelocity.y != 0)
+        if (rb.linearVelocity.y != 0)
         {
             animator.SetBool("isJump", true);
         }
