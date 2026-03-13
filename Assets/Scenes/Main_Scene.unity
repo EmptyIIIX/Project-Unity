@@ -415,6 +415,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: -8435245712485981826, guid: 7747ff5852d09d84793019089ca7c874, type: 3}
+--- !u!96 &161942832 stripped
+TrailRenderer:
+  m_CorrespondingSourceObject: {fileID: 3436847070674874219, guid: 6ee5e09780ee59f428b9e9598977e106, type: 3}
+  m_PrefabInstance: {fileID: 3896670920962121777}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &211850469
 GameObject:
   m_ObjectHideFlags: 0
@@ -150888,6 +150893,26 @@ PrefabInstance:
       propertyPath: m_Interpolate
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3436847070674874219, guid: 6ee5e09780ee59f428b9e9598977e106, type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3436847070674874219, guid: 6ee5e09780ee59f428b9e9598977e106, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 826713455
+      objectReference: {fileID: 0}
+    - target: {fileID: 3436847070674874219, guid: 6ee5e09780ee59f428b9e9598977e106, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3436847070674874219, guid: 6ee5e09780ee59f428b9e9598977e106, type: 3}
+      propertyPath: m_Parameters.colorGradient.m_ColorSpace
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3436847070674874219, guid: 6ee5e09780ee59f428b9e9598977e106, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3494922474093720893, guid: 6ee5e09780ee59f428b9e9598977e106, type: 3}
       propertyPath: m_Name
       value: FinalPlayer
@@ -150900,6 +150925,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 826713455
       objectReference: {fileID: 0}
+    - target: {fileID: 8886531829404847661, guid: 6ee5e09780ee59f428b9e9598977e106, type: 3}
+      propertyPath: tr
+      value: 
+      objectReference: {fileID: 161942832}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

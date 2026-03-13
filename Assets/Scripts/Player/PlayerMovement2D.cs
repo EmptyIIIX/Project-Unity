@@ -16,6 +16,7 @@ public class PlayerMovement2D : MonoBehaviour
     [SerializeField] private float dashDuration = 0.15f;
     [SerializeField] private float cooldownDash = 1f;
     [SerializeField] private LayerMask obstacleLayer;
+    [SerializeField] private TrailRenderer tr;
 
     private float moveInput;
     private bool isDashing;
@@ -133,9 +134,10 @@ public class PlayerMovement2D : MonoBehaviour
             rb.MovePosition(rb.position + dashDir * step);
 
             elapsed += Time.fixedDeltaTime;
+            tr.emitting = true;
             yield return new WaitForFixedUpdate();
         }
-
+        tr.emitting = false;
         isDashing = false;
     }
     private void FlipCharacter()
