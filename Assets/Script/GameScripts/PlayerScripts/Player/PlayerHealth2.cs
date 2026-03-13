@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using UnityEngine;
 
@@ -10,9 +10,17 @@ public class PlayerHealth2 : MonoBehaviour
     public HealthUI healthUI;
 
     private SpriteRenderer spriteRenderer;
+    private DamgeFlash _damgeFlash;
+
+    [Header("Damage VFX")]
+    public ParticleSystem damageVFXPrefab;
 
     public static event Action OnPlayerDied;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private void Awake()
+    {
+        _damgeFlash = GetComponent<DamgeFlash>();
+    }
     void Start()
     {
         ResetHealth();
@@ -52,20 +60,20 @@ public class PlayerHealth2 : MonoBehaviour
     {
         currentHealth -= damage;
         healthUI.UpdateHearts(currentHealth);
+        _damgeFlash.CallDamgeFlash();
 
-        StartCoroutine(FlashRed());
-
-        if(currentHealth <= 0)
+        if (currentHealth <= 0)
         {
             //player dead
             OnPlayerDied.Invoke();
         }
     }
-
-    private IEnumerator FlashRed()
+    private void Update()
     {
-        spriteRenderer.color = Color.red;
-        yield return new WaitForSeconds(0.5f);
-        spriteRenderer.color = Color.white;
+        if(Input.GetKeyDown(KeyCode.F))
+        {
+            _damgeFlash.CallDamgeFlash();
+            Debug.Log("Osu");
+        }
     }
 }

@@ -5248,45 +5248,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1511155139984752883, guid: f0ee04615c4a09e4792dc4d780a2bdf1, type: 3}
   m_PrefabInstance: {fileID: 4285664608627695117}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1390059160830636338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 95024785571083008}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a0c0860848a896428003b249188ee36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DamgeFlash
-  _flashColor: {r: 154.56604, g: 0, b: 0, a: 1}
-  _flashTime: 0.25
-  _flashSpeedCurve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!114 &1390059160830636339
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 95024785571083008}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4e3bc5f2d7aa0348bbb753901ca90a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DashGhost
-  ghostMaterial: {fileID: 2100000, guid: a06ffba5b18829b44a58cbce98699f38, type: 2}
-  ghostColor: {r: 1, g: 1, b: 1, a: 1}
-  glowIntensity: 1.5
-  startAlpha: 0.8
-  ghostCount: 5
-  ghostInterval: 0.05
-  ghostLifetime: 0.3
 --- !u!1001 &4285664608627695117
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5343,10 +5304,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3139559688854252716, guid: f0ee04615c4a09e4792dc4d780a2bdf1, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 7bc924f785d1caa409aa7cb785b8ef5a, type: 2}
     - target: {fileID: 6868291869124534475, guid: f0ee04615c4a09e4792dc4d780a2bdf1, type: 3}
       propertyPath: m_Camera
       value: 
@@ -5354,13 +5311,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 205433873027139888, guid: f0ee04615c4a09e4792dc4d780a2bdf1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1390059160830636338}
-    - targetCorrespondingSourceObject: {fileID: 205433873027139888, guid: f0ee04615c4a09e4792dc4d780a2bdf1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1390059160830636339}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0ee04615c4a09e4792dc4d780a2bdf1, type: 3}
 --- !u!1001 &5122707457025208401
 PrefabInstance:
