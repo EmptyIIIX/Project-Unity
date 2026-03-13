@@ -1,0 +1,1653 @@
+fileFormatVersion: 2
+guid: afac0a8c84edbb9499781f67dab0a9d4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7483984036160359660
+    second: Player-aseprite_2-Sheet_0
+  - first:
+      213: 6276207920904847710
+    second: Player-aseprite_2-Sheet_1
+  - first:
+      213: -62267226482495810
+    second: Player-aseprite_2-Sheet_2
+  - first:
+      213: -1691023159839047150
+    second: Player-aseprite_2-Sheet_3
+  - first:
+      213: -5324186647218115191
+    second: Player-aseprite_2-Sheet_4
+  - first:
+      213: -3699218638668306970
+    second: Player-aseprite_2-Sheet_5
+  - first:
+      213: 6666447638810633384
+    second: Player-aseprite_2-Sheet_6
+  - first:
+      213: -950616338832698514
+    second: Player-aseprite_2-Sheet_7
+  - first:
+      213: -3127230109553882380
+    second: Player-aseprite_2-Sheet_8
+  - first:
+      213: 4589243508847168498
+    second: Player-aseprite_2-Sheet_9
+  - first:
+      213: -9170753283666713072
+    second: Player-aseprite_2-Sheet_10
+  - first:
+      213: 2421871858757061960
+    second: Player-aseprite_2-Sheet_11
+  - first:
+      213: 1132919190349826520
+    second: Player-aseprite_2-Sheet_12
+  - first:
+      213: -8795251175295081290
+    second: Player-aseprite_2-Sheet_13
+  - first:
+      213: -4914521246764923191
+    second: Player-aseprite_2-Sheet_14
+  - first:
+      213: 738085694970969036
+    second: Player-aseprite_2-Sheet_15
+  - first:
+      213: -1780676081968644420
+    second: Player-aseprite_2-Sheet_16
+  - first:
+      213: 8388404733659764499
+    second: Player-aseprite_2-Sheet_17
+  - first:
+      213: 147269276512161689
+    second: Player-aseprite_2-Sheet_18
+  - first:
+      213: 2802064660232496906
+    second: Player-aseprite_2-Sheet_19
+  - first:
+      213: -4112995694023099061
+    second: Player-aseprite_2-Sheet_20
+  - first:
+      213: -8730281834329406565
+    second: Player-aseprite_2-Sheet_21
+  - first:
+      213: -7540703369216852356
+    second: Player-aseprite_2-Sheet_22
+  - first:
+      213: 3947702791325982
+    second: Player-aseprite_2-Sheet_23
+  - first:
+      213: -3548462999043982727
+    second: Player-aseprite_2-Sheet_24
+  - first:
+      213: -3440297079451053776
+    second: Player-aseprite_2-Sheet_25
+  - first:
+      213: -6522841236005900185
+    second: Player-aseprite_2-Sheet_26
+  - first:
+      213: -1992271756277992060
+    second: Player-aseprite_2-Sheet_27
+  - first:
+      213: 3049015472519941407
+    second: Player-aseprite_2-Sheet_28
+  - first:
+      213: -5173292937765736607
+    second: Player-aseprite_2-Sheet_29
+  - first:
+      213: -757876852678082939
+    second: Player-aseprite_2-Sheet_30
+  - first:
+      213: 5455120195048920659
+    second: Player-aseprite_2-Sheet_31
+  - first:
+      213: 7107124631495438332
+    second: Player-aseprite_2-Sheet_32
+  - first:
+      213: 42233454893652395
+    second: Player-aseprite_2-Sheet_33
+  - first:
+      213: 8465319353625471835
+    second: Player-aseprite_2-Sheet_34
+  - first:
+      213: 1696514023709893697
+    second: Player-aseprite_2-Sheet_35
+  - first:
+      213: -38467556995310317
+    second: Player-aseprite_2-Sheet_36
+  - first:
+      213: -4143623609593372775
+    second: Player-aseprite_2-Sheet_37
+  - first:
+      213: 1310526364827099272
+    second: Player-aseprite_2-Sheet_38
+  - first:
+      213: 3419050545865041000
+    second: Player-aseprite_2-Sheet_39
+  - first:
+      213: 943020634348203887
+    second: Player-aseprite_2-Sheet_40
+  - first:
+      213: -8844138913800033428
+    second: Player-aseprite_2-Sheet_41
+  - first:
+      213: -7398907252573387142
+    second: Player-aseprite_2-Sheet_42
+  - first:
+      213: 4869355714419397326
+    second: Player-aseprite_2-Sheet_43
+  - first:
+      213: -6617782101875539250
+    second: Player-aseprite_2-Sheet_44
+  - first:
+      213: 8633585371635613099
+    second: Player-aseprite_2-Sheet_45
+  - first:
+      213: 7757526730335377278
+    second: Player-aseprite_2-Sheet_46
+  - first:
+      213: -8059333540138178453
+    second: Player-aseprite_2-Sheet_47
+  - first:
+      213: 369836512028544386
+    second: Player-aseprite_2-Sheet_48
+  - first:
+      213: 1689007294601605003
+    second: Player-aseprite_2-Sheet_49
+  - first:
+      213: 6003462102437886181
+    second: Player-aseprite_2-Sheet_50
+  - first:
+      213: 3921876218270822711
+    second: Player-aseprite_2-Sheet_51
+  - first:
+      213: 7187786045178027547
+    second: Player-aseprite_2-Sheet_52
+  - first:
+      213: 8126233490721816792
+    second: Player-aseprite_2-Sheet_53
+  - first:
+      213: -2150272805594822521
+    second: Player-aseprite_2-Sheet_54
+  - first:
+      213: 3925451707008033612
+    second: Player-aseprite_2-Sheet_55
+  - first:
+      213: 2045595597367223660
+    second: Player-aseprite_2-Sheet_56
+  - first:
+      213: 1089480305263926947
+    second: Player-aseprite_2-Sheet_57
+  - first:
+      213: 8139372184604172368
+    second: Player-aseprite_2-Sheet_58
+  - first:
+      213: 8498319158737739340
+    second: Player-aseprite_2-Sheet_59
+  - first:
+      213: 4044045429242125712
+    second: Player-aseprite_2-Sheet_60
+  - first:
+      213: -1906633496416081149
+    second: Player-aseprite_2-Sheet_61
+  - first:
+      213: 6039145426845984382
+    second: Player-aseprite_2-Sheet_62
+  - first:
+      213: -8009197341814743340
+    second: Player-aseprite_2-Sheet_63
+  - first:
+      213: -7226489654244056418
+    second: Player-aseprite_2-Sheet_64
+  - first:
+      213: 1390550159924212386
+    second: Player-aseprite_2-Sheet_65
+  - first:
+      213: -8108908011566018918
+    second: Player-aseprite_2-Sheet_66
+  - first:
+      213: -7785110360786985972
+    second: Player-aseprite_2-Sheet_67
+  - first:
+      213: -5619239647038889090
+    second: Player-aseprite_2-Sheet_68
+  - first:
+      213: 4337060317266118291
+    second: Player-aseprite_2-Sheet_69
+  - first:
+      213: 6404940928683235492
+    second: Player-aseprite_2-Sheet_70
+  - first:
+      213: 5220080861878619700
+    second: Player-aseprite_2-Sheet_71
+  - first:
+      213: 2231010954210475817
+    second: Player-aseprite_2-Sheet_72
+  - first:
+      213: 634595523480482375
+    second: Player-aseprite_2-Sheet_73
+  - first:
+      213: -3340227935266223170
+    second: Player-aseprite_2-Sheet_74
+  - first:
+      213: 139132513722286025
+    second: Player-aseprite_2-Sheet_75
+  - first:
+      213: -4986943877095566200
+    second: Player-aseprite_2-Sheet_76
+  - first:
+      213: -4366795930775684033
+    second: Player-aseprite_2-Sheet_77
+  - first:
+      213: 7538280564897216079
+    second: Player-aseprite_2-Sheet_78
+  - first:
+      213: 2244478388405320949
+    second: Player-aseprite_2-Sheet_79
+  - first:
+      213: -2009053875787987804
+    second: Player-aseprite_2-Sheet_80
+  - first:
+      213: -5133071424760379236
+    second: Player-aseprite_2-Sheet_81
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 40
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 420
+        width: 73
+        height: 70
+      alignment: 9
+      pivot: {x: 0.45940837, y: 0.5693442}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 413b7f3cb2c832890800000000000000
+      internalID: -7483984036160359660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 420
+        width: 73
+        height: 70
+      alignment: 9
+      pivot: {x: 0.4594084, y: 0.5693442}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e51c60ee9d1991750800000000000000
+      internalID: 6276207920904847710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 420
+        width: 73
+        height: 70
+      alignment: 9
+      pivot: {x: 0.4594084, y: 0.5693442}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebeac549948c22ff0800000000000000
+      internalID: -62267226482495810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 420
+        width: 73
+        height: 70
+      alignment: 9
+      pivot: {x: 0.4594084, y: 0.5693442}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 212c5d245674888e0800000000000000
+      internalID: -1691023159839047150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 420
+        width: 73
+        height: 70
+      alignment: 9
+      pivot: {x: 0.4594084, y: 0.5693442}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98dafaef370bc16b0800000000000000
+      internalID: -5324186647218115191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 420
+        width: 73
+        height: 70
+      alignment: 9
+      pivot: {x: 0.4594084, y: 0.5693442}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e5eba75f3cb9acc0800000000000000
+      internalID: -3699218638668306970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 420
+        width: 73
+        height: 70
+      alignment: 9
+      pivot: {x: 0.4594084, y: 0.5693442}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a4ac01aecaf38c50800000000000000
+      internalID: 6666447638810633384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 420
+        width: 73
+        height: 70
+      alignment: 9
+      pivot: {x: 0.4594084, y: 0.5693442}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e63d136f97bbec2f0800000000000000
+      internalID: -950616338832698514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 350
+        width: 73
+        height: 70
+      alignment: 9
+      pivot: {x: 0.5, y: 0.57}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fa822db8c8d994d0800000000000000
+      internalID: -3127230109553882380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 350
+        width: 73
+        height: 70
+      alignment: 9
+      pivot: {x: 0.5, y: 0.57}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fb4a9c08a440bf30800000000000000
+      internalID: 4589243508847168498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 350
+        width: 73
+        height: 70
+      alignment: 9
+      pivot: {x: 0.5, y: 0.57}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0166c4c2a70fab080800000000000000
+      internalID: -9170753283666713072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 350
+        width: 73
+        height: 70
+      alignment: 9
+      pivot: {x: 0.5, y: 0.57}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84dcab8bf973c9120800000000000000
+      internalID: 2421871858757061960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 350
+        width: 73
+        height: 70
+      alignment: 9
+      pivot: {x: 0.5, y: 0.57}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d9460c4000f8bf00800000000000000
+      internalID: 1132919190349826520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 350
+        width: 73
+        height: 70
+      alignment: 9
+      pivot: {x: 0.5, y: 0.57}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b42332c7adf0f580800000000000000
+      internalID: -8795251175295081290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 350
+        width: 73
+        height: 70
+      alignment: 9
+      pivot: {x: 0.5, y: 0.57}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c6877dd6fc1ccbb0800000000000000
+      internalID: -4914521246764923191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 350
+        width: 73
+        height: 70
+      alignment: 9
+      pivot: {x: 0.5, y: 0.57}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccbba8e67053e3a00800000000000000
+      internalID: 738085694970969036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 280
+        width: 73
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbe7932b984c947e0800000000000000
+      internalID: -1780676081968644420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 280
+        width: 73
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 317defd59a9996470800000000000000
+      internalID: 8388404733659764499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 280
+        width: 73
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99f06d070a43b0200800000000000000
+      internalID: 147269276512161689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 280
+        width: 73
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0765d666fee2e620800000000000000
+      internalID: 2802064660232496906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 280
+        width: 73
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4dba073534bbe6c0800000000000000
+      internalID: -4112995694023099061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 280
+        width: 73
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9300cb3deec7d680800000000000000
+      internalID: -8730281834329406565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 280
+        width: 73
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7efc31fc3a0a5790800000000000000
+      internalID: -7540703369216852356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 280
+        width: 73
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e194e8e2a660e0000800000000000000
+      internalID: 3947702791325982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 210
+        width: 73
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97abd53f3b351cec0800000000000000
+      internalID: -3548462999043982727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 210
+        width: 73
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0319181a80c9140d0800000000000000
+      internalID: -3440297079451053776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 210
+        width: 73
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 760399194763a75a0800000000000000
+      internalID: -6522841236005900185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 210
+        width: 73
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 485b107a4670a54e0800000000000000
+      internalID: -1992271756277992060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 210
+        width: 73
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1d883afa67405a20800000000000000
+      internalID: 3049015472519941407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 210
+        width: 73
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16faf6d7b75c438b0800000000000000
+      internalID: -5173292937765736607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 210
+        width: 73
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58eb1a4940b7b75f0800000000000000
+      internalID: -757876852678082939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 210
+        width: 73
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35653f83aea74bb40800000000000000
+      internalID: 5455120195048920659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 140
+        width: 73
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cffe6ba723491a260800000000000000
+      internalID: 7107124631495438332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 140
+        width: 73
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba9d29c7a1b069000800000000000000
+      internalID: 42233454893652395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 140
+        width: 73
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5be517d91bda7570800000000000000
+      internalID: 8465319353625471835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 140
+        width: 73
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14462bb148a3b8710800000000000000
+      internalID: 1696514023709893697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 140
+        width: 73
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31ddae1f5f5577ff0800000000000000
+      internalID: -38467556995310317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 140
+        width: 73
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99fd34be744ee76c0800000000000000
+      internalID: -4143623609593372775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 140
+        width: 73
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 880ad4c09ccef2210800000000000000
+      internalID: 1310526364827099272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 140
+        width: 73
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86424674b58e27f20800000000000000
+      internalID: 3419050545865041000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 70
+        width: 73
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6f20364548461d00800000000000000
+      internalID: 943020634348203887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 70
+        width: 73
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6b6db2248e434580800000000000000
+      internalID: -8844138913800033428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 70
+        width: 73
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a764d4c0e0dc15990800000000000000
+      internalID: -7398907252573387142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 70
+        width: 73
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec29cfa293d639340800000000000000
+      internalID: 4869355714419397326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 70
+        width: 73
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec245c8ad3ae824a0800000000000000
+      internalID: -6617782101875539250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_45
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 70
+        width: 73
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bad795e1728a0d770800000000000000
+      internalID: 8633585371635613099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_46
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 70
+        width: 73
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e77dc39c57548ab60800000000000000
+      internalID: 7757526730335377278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_47
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 70
+        width: 73
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b682cad68de772090800000000000000
+      internalID: -8059333540138178453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 73
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28d4e64295ce12500800000000000000
+      internalID: 369836512028544386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_49
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 0
+        width: 73
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8fa5c98f2f807710800000000000000
+      internalID: 1689007294601605003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_50
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 0
+        width: 73
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e8745679f4905350800000000000000
+      internalID: 6003462102437886181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_51
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 0
+        width: 73
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 731b51b34ad4d6630800000000000000
+      internalID: 3921876218270822711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_52
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 0
+        width: 73
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1e9858535520c360800000000000000
+      internalID: 7187786045178027547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_53
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 0
+        width: 73
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d04b502e4e26c070800000000000000
+      internalID: 8126233490721816792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_54
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 0
+        width: 73
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7888654a642b822e0800000000000000
+      internalID: -2150272805594822521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player-aseprite_2-Sheet_55
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 0
+        width: 73
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c432a2397810a7630800000000000000
+      internalID: 3925451707008033612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: c93b568762ec1044f87682af5eac0337
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":8.0,"y":7.0},"gridSpriteSize":{"x":73.0,"y":70.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Player-aseprite_2-Sheet_0: -7483984036160359660
+      Player-aseprite_2-Sheet_1: 6276207920904847710
+      Player-aseprite_2-Sheet_10: -9170753283666713072
+      Player-aseprite_2-Sheet_11: 2421871858757061960
+      Player-aseprite_2-Sheet_12: 1132919190349826520
+      Player-aseprite_2-Sheet_13: -8795251175295081290
+      Player-aseprite_2-Sheet_14: -4914521246764923191
+      Player-aseprite_2-Sheet_15: 738085694970969036
+      Player-aseprite_2-Sheet_16: -1780676081968644420
+      Player-aseprite_2-Sheet_17: 8388404733659764499
+      Player-aseprite_2-Sheet_18: 147269276512161689
+      Player-aseprite_2-Sheet_19: 2802064660232496906
+      Player-aseprite_2-Sheet_2: -62267226482495810
+      Player-aseprite_2-Sheet_20: -4112995694023099061
+      Player-aseprite_2-Sheet_21: -8730281834329406565
+      Player-aseprite_2-Sheet_22: -7540703369216852356
+      Player-aseprite_2-Sheet_23: 3947702791325982
+      Player-aseprite_2-Sheet_24: -3548462999043982727
+      Player-aseprite_2-Sheet_25: -3440297079451053776
+      Player-aseprite_2-Sheet_26: -6522841236005900185
+      Player-aseprite_2-Sheet_27: -1992271756277992060
+      Player-aseprite_2-Sheet_28: 3049015472519941407
+      Player-aseprite_2-Sheet_29: -5173292937765736607
+      Player-aseprite_2-Sheet_3: -1691023159839047150
+      Player-aseprite_2-Sheet_30: -757876852678082939
+      Player-aseprite_2-Sheet_31: 5455120195048920659
+      Player-aseprite_2-Sheet_32: 7107124631495438332
+      Player-aseprite_2-Sheet_33: 42233454893652395
+      Player-aseprite_2-Sheet_34: 8465319353625471835
+      Player-aseprite_2-Sheet_35: 1696514023709893697
+      Player-aseprite_2-Sheet_36: -38467556995310317
+      Player-aseprite_2-Sheet_37: -4143623609593372775
+      Player-aseprite_2-Sheet_38: 1310526364827099272
+      Player-aseprite_2-Sheet_39: 3419050545865041000
+      Player-aseprite_2-Sheet_4: -5324186647218115191
+      Player-aseprite_2-Sheet_40: 943020634348203887
+      Player-aseprite_2-Sheet_41: -8844138913800033428
+      Player-aseprite_2-Sheet_42: -7398907252573387142
+      Player-aseprite_2-Sheet_43: 4869355714419397326
+      Player-aseprite_2-Sheet_44: -6617782101875539250
+      Player-aseprite_2-Sheet_45: 8633585371635613099
+      Player-aseprite_2-Sheet_46: 7757526730335377278
+      Player-aseprite_2-Sheet_47: -8059333540138178453
+      Player-aseprite_2-Sheet_48: 369836512028544386
+      Player-aseprite_2-Sheet_49: 1689007294601605003
+      Player-aseprite_2-Sheet_5: -3699218638668306970
+      Player-aseprite_2-Sheet_50: 6003462102437886181
+      Player-aseprite_2-Sheet_51: 3921876218270822711
+      Player-aseprite_2-Sheet_52: 7187786045178027547
+      Player-aseprite_2-Sheet_53: 8126233490721816792
+      Player-aseprite_2-Sheet_54: -2150272805594822521
+      Player-aseprite_2-Sheet_55: 3925451707008033612
+      Player-aseprite_2-Sheet_6: 6666447638810633384
+      Player-aseprite_2-Sheet_7: -950616338832698514
+      Player-aseprite_2-Sheet_8: -3127230109553882380
+      Player-aseprite_2-Sheet_9: 4589243508847168498
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
