@@ -6,12 +6,13 @@ public class PlayerHealth2 : MonoBehaviour
 {
     public int maxHealth = 3;
     private int currentHealth;
-
     public HealthUI healthUI;
-
     private SpriteRenderer spriteRenderer;
-
     public static event Action OnPlayerDied;
+
+    //Iframe player
+    bool isImmune;
+    public float immuneTime = 1f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -24,10 +25,15 @@ public class PlayerHealth2 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        EnemyGuardMovement enemyGuard = collision.GetComponent<EnemyGuardMovement>();
-        if (enemyGuard)
+        //EnemyGuardMovement enemyGuard = collision.GetComponent<EnemyGuardMovement>();
+        EnemyAttackHitbox attackHitbox = collision.GetComponent<EnemyAttackHitbox>();
+        //if (enemyGuard)
+        //{
+        //    TakeDamage(enemyGuard.damage);
+        //}
+        if (attackHitbox)
         {
-            TakeDamage(enemyGuard.damage);
+            TakeDamage(attackHitbox.Damage);//        change later***********************
         }
     }
 
@@ -50,10 +56,13 @@ public class PlayerHealth2 : MonoBehaviour
 
     private void TakeDamage(int damage)
     {
+        if(isImmune) return;
+
         currentHealth -= damage;
         healthUI.UpdateHearts(currentHealth);
 
-        StartCoroutine(FlashRed());
+        StartCoroutine(ImmuneCoroutine());
+        //StartCoroutine(FlashRed());
 
         if(currentHealth <= 0)
         {
@@ -62,10 +71,30 @@ public class PlayerHealth2 : MonoBehaviour
         }
     }
 
-    private IEnumerator FlashRed()
+    private IEnumerator ImmuneCoroutine()
     {
-        spriteRenderer.color = Color.red;
-        yield return new WaitForSeconds(0.5f);
+        isImmune = true;
+
+        float timer = 0;
+
+        while (timer < immuneTime)
+        {
+            spriteRenderer.color = Color.red;
+            yield return new WaitForSeconds(0.1f);
+            spriteRenderer.color = Color.white;
+            yield return new WaitForSeconds(0.1f);
+
+            timer += 0.2f;
+        }
+
         spriteRenderer.color = Color.white;
+        isImmune = false;
     }
+
+    //private IEnumerator FlashRed()
+    //{
+    //    spriteRenderer.color = Color.red;
+    //    yield return new WaitForSeconds(0.5f);
+    //    spriteRenderer.color = Color.white;
+    //}
 }
