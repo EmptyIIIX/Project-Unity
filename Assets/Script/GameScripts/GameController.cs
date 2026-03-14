@@ -46,9 +46,11 @@ public class GameController : MonoBehaviour
         LoadLevel(0);       //this can use with teleport pole*****************************
         OnReset.Invoke();
 
+        if (CheckpointManager.Instance != null)
+            CheckpointManager.Instance.ResetCheckpoint();
+
         Time.timeScale = 1;     //Time run###
     }
-
     void IncreaseProgressSoulAmount(int amount)
     {
         progressSoulAmount += amount;
@@ -57,8 +59,6 @@ public class GameController : MonoBehaviour
         {
             //Collect Complete
             Debug.Log("Level Complete");
-
-
 
             //this can change to be onGate to boss room and not this method
             LoadCanvas.SetActive(true);
@@ -71,11 +71,10 @@ public class GameController : MonoBehaviour
 
         levels[currentLevelIndex].gameObject.SetActive(false);
         levels[level].gameObject.SetActive(true);
-
-        player.transform.position = new Vector3(50, -10, 0);   //Change later*************************************************
-
         currentLevelIndex = level;
         
+        if (player != null && CheckpointManager.Instance != null)
+        player.transform.position = CheckpointManager.Instance.GetRespawnPoint(levels[level].transform.position);
     }
 
     void LoadNextLevel()
@@ -95,11 +94,5 @@ public class GameController : MonoBehaviour
     {
         progressSoulAmount += 1;
         progressSoulSlider.value += 1;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
