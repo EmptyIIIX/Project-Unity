@@ -42,11 +42,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _DistanceWave: -0.1
+    - _DistanceWave: 1
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _ShockWaveStrenght: -0.28
-    - _Size: 0.05
+    - _ShockWaveStrenght: -3.24
+    - _Size: 0.17
     m_Colors:
     - _RingSpawnPosition: {r: 0.5, g: 0.5, b: 0, a: 0}
   m_BuildTextureStacks: []

@@ -140,7 +140,7 @@ public class PlayerMovement2 : MonoBehaviour
         canDash = false;
         isDashing = true;
         //tr.emitting = true;
-        dashGhost?.StartGhost();
+        dashGhost.StartAfterimage();
         animator.SetBool("isDashing?", true);
 
         float dashDirection = isFacingRight ? 1f : -1f;
@@ -153,7 +153,7 @@ public class PlayerMovement2 : MonoBehaviour
         
         isDashing = false;
         //tr.emitting = false;
-        dashGhost?.StopGhost();
+        dashGhost.StopAfterimage();
         Physics2D.IgnoreLayerCollision(20, 9, false);
 
         yield return new WaitForSeconds(dashCooldown);

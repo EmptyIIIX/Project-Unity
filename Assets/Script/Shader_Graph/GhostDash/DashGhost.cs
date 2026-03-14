@@ -5,102 +5,58 @@ public class DashGhost : MonoBehaviour
 {
     [Header("Ghost Settings")]
     public Material ghostMaterial;
-
-    [Header("Color & Glow")]
-    public Color ghostColor = Color.white;
-    [Range(0f, 3f)]
-    public float glowIntensity = 1.5f;
+    public float ghostLifetime = 0.35f;
+    public float spawnInterval = 0.03f;
     [Range(0f, 1f)]
-    public float startAlpha = 0.8f;
+    public float startAlpha = 1f;
 
-    [Header("Trail Settings")]
-    public int ghostCount = 5;            // จำนวนร่างที่เห็นพร้อมกัน
-    public float ghostInterval = 0.06f;        // spawn ทุกกี่วินาที
-    public float ghostLifetime = 0.3f;         // นานแค่ไหนก่อน fade หมด
+    private bool _isSpawning;
 
-    private SpriteRenderer playerSprite;
-    private Coroutine spawnRoutine;
-
-    private static readonly int AlphaProp = Shader.PropertyToID("_Alpha");
-    private static readonly int ColorProp = Shader.PropertyToID("_GhostColor");
-    private static readonly int GlowProp = Shader.PropertyToID("_GlowIntensity");
-
-    void Awake()
+    public void StartAfterimage()
     {
-        playerSprite = GetComponent<SpriteRenderer>();
+        if (!_isSpawning)
+            StartCoroutine(SpawnLoop());
     }
 
-    void OnDestroy()
-    {
-        StopGhost();
-    }
+    public void StopAfterimage() => _isSpawning = false;
 
-    // ── เรียกตอนเริ่ม Dash ──
-    public void StartGhost()
+    IEnumerator SpawnLoop()
     {
-        if (spawnRoutine != null) StopCoroutine(spawnRoutine);
-        spawnRoutine = StartCoroutine(SpawnLoop());
-    }
-
-    // ── เรียกตอน Dash จบ ──
-    public void StopGhost()
-    {
-        if (spawnRoutine == null) return;
-        StopCoroutine(spawnRoutine);
-        spawnRoutine = null;
-    }
-
-    private IEnumerator SpawnLoop()
-    {
-        while (true)
+        _isSpawning = true;
+        while (_isSpawning)
         {
             SpawnGhost();
-            yield return new WaitForSeconds(ghostInterval);
+            yield return new WaitForSeconds(spawnInterval);
         }
     }
 
-    private void SpawnGhost()
+    void SpawnGhost()
     {
-        GameObject ghost = new GameObject("DashGhost");
-        ghost.transform.position = transform.position;
-        ghost.transform.rotation = transform.rotation;
-        ghost.transform.localScale = transform.localScale;
+        SpriteRenderer[] allRenderers = GetComponentsInChildren<SpriteRenderer>(true);
 
-        SpriteRenderer sr = ghost.AddComponent<SpriteRenderer>();
-        sr.sprite = playerSprite.sprite;
-        sr.flipX = playerSprite.flipX;
-        sr.sortingLayerID = playerSprite.sortingLayerID;
-        sr.sortingOrder = playerSprite.sortingOrder - 1;
-
-        Material mat = new Material(ghostMaterial);
-        mat.SetColor(ColorProp, ghostColor);
-        mat.SetFloat(AlphaProp, startAlpha);
-        mat.SetFloat(GlowProp, glowIntensity);
-        sr.material = mat;
-
-        StartCoroutine(FadeAndDestroy(sr, mat, ghost));
-    }
-
-    private IEnumerator FadeAndDestroy(SpriteRenderer sr, Material mat, GameObject ghost)
-    {
-        float elapsed = 0f;
-
-        while (elapsed < ghostLifetime)
+        foreach (SpriteRenderer original in allRenderers)
         {
-            elapsed += Time.deltaTime;
-            float t = elapsed / ghostLifetime;
+            if (original.sprite == null) continue;
 
-            // Ease out — ร่างแรกหายช้า ร่างท้ายหายเร็ว
-            float alpha = Mathf.Lerp(startAlpha, 0f, t * t);
-            mat.SetFloat(AlphaProp, alpha);
+            var ghost = new GameObject("Ghost");
+            ghost.transform.SetPositionAndRotation(
+                original.transform.position,
+                original.transform.rotation);
+            ghost.transform.localScale = original.transform.lossyScale;
 
-            // glow ลดตาม alpha ด้วย
-            mat.SetFloat(GlowProp, glowIntensity * (1f - t));
+            var sr = ghost.AddComponent<SpriteRenderer>();
+            sr.sprite = original.sprite;
+            sr.flipX = original.flipX;
+            sr.flipY = original.flipY;
+            sr.sortingLayerName = original.sortingLayerName;
+            sr.sortingOrder = original.sortingOrder - 1;
 
-            yield return null;
+            // ตั้ง alpha เริ่มต้นผ่าน color โดยตรง
+            Color c = original.color;
+            c.a = startAlpha;
+            sr.color = c;
+
+            ghost.AddComponent<GhostFader>().Init(sr, ghostLifetime, startAlpha);
         }
-
-        Destroy(mat);
-        Destroy(ghost);
     }
 }

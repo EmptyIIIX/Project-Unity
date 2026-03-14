@@ -15,7 +15,6 @@ public class PlayerHealth2 : MonoBehaviour
     public float immuneTime = 1f;
     [Header("Damage VFX")]
     public ParticleSystem damageVFXPrefab;
-    public static event Action OnPlayerDied;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Awake()
     {
