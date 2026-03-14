@@ -29,7 +29,6 @@ public class PlayerHealth2 : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         GameController.OnReset += ResetHealth;
         HoldToLoadLevel.OnHoldComplete += Heal;
-        //startPosition = transform.position;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -101,20 +100,4 @@ public class PlayerHealth2 : MonoBehaviour
         isImmune = false;
     }
 
-    //private IEnumerator FlashRed()
-    //{
-    //    spriteRenderer.color = Color.red;
-    //    yield return new WaitForSeconds(0.5f);
-    //    spriteRenderer.color = Color.white;
-    //}
-
-    //public void Respawn()
-    //{
-    //    Vector3 respawn = startPosition;
-
-    //    if (CheckpointManager.Instance != null)
-    //        respawn = CheckpointManager.Instance.GetRespawnPoint(startPosition);
-
-    //    transform.position = respawn;
-    //}
 }
