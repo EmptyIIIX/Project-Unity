@@ -192,7 +192,8 @@ public class EnemyGuardMovement : MonoBehaviour, IEnemy
         StartCoroutine(FlashWhite());
         if(currentHealth <= 0)
         {
-            Die();
+            //animator.SetTrigger("Die");
+            StartCoroutine(animDie());
         }
     }
 
@@ -205,10 +206,19 @@ public class EnemyGuardMovement : MonoBehaviour, IEnemy
 
     }
 
+    private IEnumerator animDie()
+    {
+        animator.SetTrigger("Die");
+
+        yield return new WaitForSeconds(2.5f);
+
+        Die();
+    }
+
     void Die()
     {
         //drop item
-        foreach(LootItem lootItem in lootTable)
+        foreach (LootItem lootItem in lootTable)
         {
             if (Random.Range(0f, 100f) <= lootItem.dropChance)
             {

@@ -25,9 +25,12 @@ public class GameController : MonoBehaviour
         Soul.OnSoulCollect += IncreaseProgressSoulAmount;
         //HoldToLoadLevel.OnHoldComplete += LoadNextLevel;          have to go into the gate
         HoldToLoadLevel.OnHoldComplete += LoadHealPlayer;
+        PlayerAttack.HitEnemy += absorbSoul;
         LoadCanvas.SetActive(false);
         PlayerHealth2.OnPlayerDied += GameOverScreen;
         gameOverScreen.SetActive(false);
+
+        GateToNextLevel.IntoGate += LoadNextLevel;
     }
 
     void GameOverScreen()
@@ -69,7 +72,7 @@ public class GameController : MonoBehaviour
         levels[currentLevelIndex].gameObject.SetActive(false);
         levels[level].gameObject.SetActive(true);
 
-        player.transform.position = new Vector3(0, 0, 0);   //Change later*************************************************
+        player.transform.position = new Vector3(50, -10, 0);   //Change later*************************************************
 
         currentLevelIndex = level;
         
@@ -86,6 +89,12 @@ public class GameController : MonoBehaviour
         LoadCanvas.SetActive(false);
         progressSoulAmount = 0;
         progressSoulSlider.value = 0;
+    }
+
+    void absorbSoul()
+    {
+        progressSoulAmount += 1;
+        progressSoulSlider.value += 1;
     }
 
     // Update is called once per frame
