@@ -1,13 +1,32 @@
 using UnityEngine;
-using UnityEngine.Rendering;
 
 public class FinishPoint : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+    [Header("Press E UI")]
+    [SerializeField] GameObject pressEUI;
+
+    bool playerNearby = false;
+
+    void Update()
     {
-        if (collision.CompareTag("Player"))
+        if (playerNearby && Input.GetKeyDown(KeyCode.E))
         {
+            pressEUI.SetActive(false);
             SceneController.instance.NextLevel();
         }
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (!collision.CompareTag("Player")) return;
+        playerNearby = true;
+        pressEUI.SetActive(true);
+    }
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (!collision.CompareTag("Player")) return;
+        playerNearby = false;
+        pressEUI.SetActive(false);
     }
 }
