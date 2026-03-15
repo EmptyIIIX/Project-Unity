@@ -192,7 +192,7 @@ public class EnemyGuardMovement : MonoBehaviour, IEnemy
         if(isDie) { return; }
         currentHealth -= damage;
         StartCoroutine(FlashWhite());
-        if(currentHealth <= 0)
+        if (currentHealth <= 0)
         {
             //animator.SetTrigger("Die");
             isDie = true;
@@ -203,7 +203,7 @@ public class EnemyGuardMovement : MonoBehaviour, IEnemy
     private IEnumerator FlashWhite()
     {
         ogColor = spriteRenderer.color;
-        spriteRenderer.color = Color.red;
+        spriteRenderer.color = Color.white;
         yield return new WaitForSeconds(0.2f);
         spriteRenderer.color = ogColor;
 
@@ -213,7 +213,7 @@ public class EnemyGuardMovement : MonoBehaviour, IEnemy
     {
         animator.SetTrigger("Die");
 
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(1f);
 
         Die();
     }

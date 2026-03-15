@@ -70,6 +70,7 @@ public class PlayerAttack : MonoBehaviour
         {
             //for class enemy
             enemy.GetComponent<EnemyGuardMovement>()?.TakeDamage(NormalAttackDamage);
+            enemy.GetComponentInParent<HellHound_script>()?.TakeDamage(NormalAttackDamage);
             enemy.GetComponent<BossHealth>()?.TakeDamage(NormalAttackDamage);
             HitEnemy.Invoke();
         }
