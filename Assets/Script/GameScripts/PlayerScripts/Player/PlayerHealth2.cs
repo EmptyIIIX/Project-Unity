@@ -1,11 +1,11 @@
-using System;
+﻿using System;
 using System.Collections;
 using UnityEngine;
 
 public class PlayerHealth2 : MonoBehaviour
 {
-    public int maxHealth = 3;
-    private int currentHealth;
+    public int maxHealth = 5;
+    public int currentHealth;
     public HealthUI healthUI;
     private SpriteRenderer spriteRenderer;
     public static event Action OnPlayerDied;
