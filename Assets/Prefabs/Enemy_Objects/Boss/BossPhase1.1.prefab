@@ -351,16 +351,19 @@ MonoBehaviour:
   stateAnimation: {fileID: 1135366009018340594}
   bossHealth: {fileID: 6528282746031148668}
   capsuleCollider: {fileID: 2461844965744175407}
+  FlashEffect: {fileID: 875594493673340462, guid: 6d344a9877308c04c96009a7d268558c, type: 3}
+  flashFade: {fileID: -6157126322005102905, guid: 6d344a9877308c04c96009a7d268558c, type: 3}
   attackDelay: 3
   BossRB: {fileID: 6128475611787939686}
   BossTransform: {fileID: 7312142473341606134}
-  PlayerTransform: {fileID: 0}
+  PlayerTransform: {fileID: 5020870423006400502, guid: 7c5db5fdedfbf344a83d3b157ab452de, type: 3}
   BehindPlayerTransform: {fileID: 0}
   leftTeleport: {fileID: 3794200819962343161}
   rightTeleport: {fileID: 5022501652922532557}
   centerPointAttack: {fileID: 8982869037875936889}
   maxCooldownSkill1: 20
   dashSpeed: 80
+  TimeToNextAttack: 1
   maxCooldownSkill2: 10
   bulletBossPrefab: {fileID: 2364577149283424507, guid: 973e3d1145815fd4eb9d235f8ea09f9f, type: 3}
   groundLayer:

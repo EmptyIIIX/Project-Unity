@@ -187,6 +187,8 @@ GameObject:
   - component: {fileID: 7019443627130303341}
   - component: {fileID: 3366567582874914805}
   - component: {fileID: 601070387067180137}
+  - component: {fileID: 6148735393364239495}
+  - component: {fileID: 3347404563453900589}
   m_Layer: 20
   m_Name: Player-ver3.1
   m_TagString: Player
@@ -628,6 +630,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth2
   maxHealth: 3
+  currentHealth: 0
   healthUI: {fileID: 0}
   isImmune: 0
   immuneTime: 1
@@ -654,6 +657,34 @@ MonoBehaviour:
   isAttacking: 0
   canReceiveInput: 0
   inputReceived: 0
+--- !u!114 &6148735393364239495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5827066296787415265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4e3bc5f2d7aa0348bbb753901ca90a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DashGhost
+  ghostMaterial: {fileID: 2100000, guid: a06ffba5b18829b44a58cbce98699f38, type: 2}
+  ghostLifetime: 0.35
+  spawnInterval: 0.03
+  startAlpha: 1
+--- !u!114 &3347404563453900589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5827066296787415265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9659af013bea4e24cbcffa713935a1b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GhostFader
 --- !u!1 &8549710293921427622
 GameObject:
   m_ObjectHideFlags: 0

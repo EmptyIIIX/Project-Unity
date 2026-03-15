@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.LowLevel;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 
@@ -12,6 +13,7 @@ public class GameController : MonoBehaviour
     public GameObject player;
     public GameObject LoadCanvas;
     public List<GameObject> levels;
+    public Transform SpawnPoint;
     private int currentLevelIndex = 0;
 
     public GameObject gameOverScreen;
@@ -31,6 +33,7 @@ public class GameController : MonoBehaviour
         gameOverScreen.SetActive(false);
 
         GateToNextLevel.IntoGate += LoadNextLevel;
+        SpawnPoint = GetComponent<Transform>();
     }
 
     void GameOverScreen()
@@ -73,8 +76,10 @@ public class GameController : MonoBehaviour
         levels[level].gameObject.SetActive(true);
         currentLevelIndex = level;
         
-        if (player != null && CheckpointManager.Instance != null)
-        player.transform.position = CheckpointManager.Instance.GetRespawnPoint(levels[level].transform.position);
+        //if (player != null && CheckpointManager.Instance != null)
+        //player.transform.position = CheckpointManager.Instance.GetRespawnPoint(levels[level].transform.position);
+        player.transform.position = SpawnPoint.transform.position;
+        Debug.Log("Player is actived");
     }
 
     void LoadNextLevel()
