@@ -30,6 +30,7 @@ public class PlayerMovement2 : MonoBehaviour
     public float dashCooldown = 0.1f;
     bool isDashing;
     bool canDash = true;
+    private DashGhost dashGhost;
 
     [Header("Jumping")]
     public float jumpForce = 5;
@@ -66,6 +67,10 @@ public class PlayerMovement2 : MonoBehaviour
     float wallJumpTimer;
 
     // Update is called once per frame
+    void Start()
+    {
+        dashGhost = GetComponent<DashGhost>();
+    }
     void Update()
     {
         if (isDashing) { return; }
@@ -135,6 +140,7 @@ public class PlayerMovement2 : MonoBehaviour
         isDashing = true;
         playerHealth.isImmune = true;
         animator.SetBool("isDashing?", true);
+        dashGhost.StartAfterimage();
 
         float dashDirection = isFacingRight ? 1f : -1f;
 
@@ -145,6 +151,7 @@ public class PlayerMovement2 : MonoBehaviour
         rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
         
         isDashing = false;
+        dashGhost.StopAfterimage();
         Physics2D.IgnoreLayerCollision(20, 9, false);
 
         yield return new WaitForSeconds(dashCooldown);
