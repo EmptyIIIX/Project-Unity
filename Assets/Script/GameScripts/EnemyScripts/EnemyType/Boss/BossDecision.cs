@@ -9,6 +9,8 @@ public class BossDecision : MonoBehaviour
     public BossHealth bossHealth;
     Animator animator;
     public CapsuleCollider2D capsuleCollider;
+    public GameObject FlashEffect;
+    public BossFlashFade flashFade;
 
     public float attackDelay = 2f;
     private bool isAttacking;
@@ -69,7 +71,6 @@ public class BossDecision : MonoBehaviour
     {
         if(isActioningAttack == false)
         {
-
             FaceDir = Mathf.Sign(PlayerTransform.position.x - BossTransform.position.x);
             ls = BossTransform.localScale;
             Flip();
@@ -113,11 +114,13 @@ public class BossDecision : MonoBehaviour
     {
         if(FaceDir < 0 )
         {
+            flashFade.DirectionFlash(1);
             ls.x = 1;
             BossTransform.localScale = ls;
         }
         else
         {
+            flashFade.DirectionFlash(-1);
             ls.x = -1;
             BossTransform.localScale = ls;
         }
@@ -212,6 +215,7 @@ public class BossDecision : MonoBehaviour
             BossRB.linearVelocity = new Vector2(0f, BossRB.linearVelocityY);
             isAttacking=false;
             isActioningAttack=false;
+            FlashEffect.SetActive(false);
             CooldownSkill1 = maxCooldownSkill1;
         }
         else
@@ -404,6 +408,9 @@ public class BossDecision : MonoBehaviour
     {
         isActioningAttack = true;
         BossRB.linearVelocity = new Vector2(FaceDir * dashSpeed, BossRB.linearVelocityY);
+        
+        FlashEffect.SetActive(true);
+        
         Debug.Log("attack1 is active");
     }
     public void Attack2()
@@ -418,6 +425,8 @@ public class BossDecision : MonoBehaviour
 
         GameObject bullet = Instantiate(bulletBossPrefab, new Vector3(BossTransform.position.x, PlayerTransform.position.y, BossTransform.position.z), Quaternion.identity);
         bullet.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(shootDirectionX, 0) * bulletSpeed;
+
+        Destroy(bullet, 5f);
         Debug.Log("attack3 is active");
     }
     public void pauseAnimation()
