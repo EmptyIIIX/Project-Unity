@@ -1946,6 +1946,67 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &2043006882
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2318114955441645866, guid: 60b8249355f0073428ef2217b858448b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.48199
+      objectReference: {fileID: 0}
+    - target: {fileID: 2318114955441645866, guid: 60b8249355f0073428ef2217b858448b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.12457
+      objectReference: {fileID: 0}
+    - target: {fileID: 2318114955441645866, guid: 60b8249355f0073428ef2217b858448b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2318114955441645866, guid: 60b8249355f0073428ef2217b858448b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2318114955441645866, guid: 60b8249355f0073428ef2217b858448b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2318114955441645866, guid: 60b8249355f0073428ef2217b858448b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2318114955441645866, guid: 60b8249355f0073428ef2217b858448b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2318114955441645866, guid: 60b8249355f0073428ef2217b858448b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2318114955441645866, guid: 60b8249355f0073428ef2217b858448b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2318114955441645866, guid: 60b8249355f0073428ef2217b858448b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616113935270282248, guid: 60b8249355f0073428ef2217b858448b, type: 3}
+      propertyPath: m_Name
+      value: FullScreenDamageEffect
+      objectReference: {fileID: 0}
+    - target: {fileID: 7590849689034638581, guid: 60b8249355f0073428ef2217b858448b, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 8015224758983095009}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 60b8249355f0073428ef2217b858448b, type: 3}
 --- !u!4 &2563062221861408439 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7320061707119322780, guid: 7c5db5fdedfbf344a83d3b157ab452de, type: 3}
@@ -2030,11 +2091,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6867454326809154902, guid: f37636a0be12bb24d828f8636c2ede67, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.9039009
+      value: 4.3346725
       objectReference: {fileID: 0}
     - target: {fileID: 6867454326809154902, guid: f37636a0be12bb24d828f8636c2ede67, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.0064297
+      value: 4.00559
       objectReference: {fileID: 0}
     - target: {fileID: 6867454326809154902, guid: f37636a0be12bb24d828f8636c2ede67, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2452,6 +2513,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9659af013bea4e24cbcffa713935a1b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GhostFader
+--- !u!114 &8015224758983095009 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3366567582874914805, guid: 7c5db5fdedfbf344a83d3b157ab452de, type: 3}
+  m_PrefabInstance: {fileID: 9050217149519744274}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8015224758983094995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04177f08dcb27ba4d96d522d50d10e79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth2
 --- !u!1001 &8098212404891259711
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2598,3 +2670,4 @@ SceneRoots:
   - {fileID: 1984778109}
   - {fileID: 73720847}
   - {fileID: 3375243635603342132}
+  - {fileID: 2043006882}
