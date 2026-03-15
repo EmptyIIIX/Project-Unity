@@ -36,6 +36,7 @@ public class BossDecision : MonoBehaviour
     public float dashSpeed = 80f;
 
     [Header("Skill2")]
+    public float TimeToNextAttack = 1;
     public float maxCooldownSkill2 = 10f;
     private float CooldownSkill2;
 
@@ -246,7 +247,7 @@ public class BossDecision : MonoBehaviour
 
             stateAnimation.ChangeState(BossStateAnimation.BossState.Idle);
 
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(TimeToNextAttack);
 
             stateAnimation.ChangeState(BossStateAnimation.BossState.attack2);
 

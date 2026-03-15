@@ -2181,7 +2181,7 @@ MonoBehaviour:
   capsuleCollider: {fileID: 936041495357221403}
   FlashEffect: {fileID: 6969460405920940789}
   flashFade: {fileID: 7878350318886906513}
-  attackDelay: 3
+  attackDelay: 1
   BossRB: {fileID: 8925006557499542610}
   BossTransform: {fileID: 5453495084301130690}
   PlayerTransform: {fileID: 7677226763432348596}
@@ -2191,6 +2191,7 @@ MonoBehaviour:
   centerPointAttack: {fileID: 5944410658869755213}
   maxCooldownSkill1: 2
   dashSpeed: 80
+  TimeToNextAttack: 0.1
   maxCooldownSkill2: 10
   bulletBossPrefab: {fileID: 2364577149283424507, guid: 973e3d1145815fd4eb9d235f8ea09f9f, type: 3}
   groundLayer:
