@@ -9,17 +9,11 @@ public class PlayerHealth2 : MonoBehaviour
     public HealthUI healthUI;
     private SpriteRenderer spriteRenderer;
     public static event Action OnPlayerDied;
-    private DamgeFlash _damgeFlash;
 
-    bool isImmune;
+    //Iframe player
+    public bool isImmune;
     public float immuneTime = 1f;
-    [Header("Damage VFX")]
-    public ParticleSystem damageVFXPrefab;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    private void Awake()
-    {
-        _damgeFlash = GetComponent<DamgeFlash>();
-    }
     void Start()
     {
         ResetHealth();
@@ -66,7 +60,6 @@ public class PlayerHealth2 : MonoBehaviour
 
         currentHealth -= damage;
         healthUI.UpdateHearts(currentHealth);
-        _damgeFlash.CallDamgeFlash();
 
         StartCoroutine(ImmuneCoroutine());
         //StartCoroutine(FlashRed());

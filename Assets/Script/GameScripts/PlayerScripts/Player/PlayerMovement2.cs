@@ -18,19 +18,18 @@ public class PlayerMovement2 : MonoBehaviour
     [Header("Reference")]
     public Rigidbody2D rb;
     public Animator animator;
+    public PlayerHealth2 playerHealth;
 
     [Header("Movement")]
     public float moveSpeed = 5;
     public float horizontalMovement;
 
     [Header("Dashing")]
-    [SerializeField] TrailRenderer tr;
     public float dashSpeed = 20f;
     public float dashDuration = 0.1f;
     public float dashCooldown = 0.1f;
     bool isDashing;
     bool canDash = true;
-    private DashGhost dashGhost;
 
     [Header("Jumping")]
     public float jumpForce = 5;
@@ -65,11 +64,6 @@ public class PlayerMovement2 : MonoBehaviour
     bool isWallJumping;
     float wallJumpDirection;
     float wallJumpTimer;
-
-    void Start()
-    {
-        dashGhost = GetComponent<DashGhost>();
-    }
 
     // Update is called once per frame
     void Update()
@@ -139,8 +133,7 @@ public class PlayerMovement2 : MonoBehaviour
         Physics2D.IgnoreLayerCollision(20, 9, true);
         canDash = false;
         isDashing = true;
-        //tr.emitting = true;
-        dashGhost.StartAfterimage();
+        playerHealth.isImmune = true;
         animator.SetBool("isDashing?", true);
 
         float dashDirection = isFacingRight ? 1f : -1f;
@@ -152,11 +145,11 @@ public class PlayerMovement2 : MonoBehaviour
         rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
         
         isDashing = false;
-        //tr.emitting = false;
-        dashGhost.StopAfterimage();
         Physics2D.IgnoreLayerCollision(20, 9, false);
 
         yield return new WaitForSeconds(dashCooldown);
+        
+        playerHealth.isImmune = false;
         canDash = true;
     }
 
