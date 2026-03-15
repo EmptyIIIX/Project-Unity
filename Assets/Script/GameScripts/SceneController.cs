@@ -25,6 +25,6 @@ public class SceneController : MonoBehaviour
 
     public void LoadScene(string sceneName)
     {
-        TransitionManager.Instance.TeleportToBossRoom(sceneName);
+        TransitionManager.Instance.CurrentScene(sceneName);
     }
 }

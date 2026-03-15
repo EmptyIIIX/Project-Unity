@@ -11,7 +11,8 @@ public class FinishPoint : MonoBehaviour
     {
         if (playerNearby && Input.GetKeyDown(KeyCode.E))
         {
-            pressEUI.SetActive(false);
+            if (pressEUI != null)
+                pressEUI.SetActive(false);
             SceneController.instance.NextLevel();
         }
     }
@@ -20,6 +21,7 @@ public class FinishPoint : MonoBehaviour
     {
         if (!collision.CompareTag("Player")) return;
         playerNearby = true;
+        if (pressEUI != null)
         pressEUI.SetActive(true);
     }
 
@@ -27,6 +29,7 @@ public class FinishPoint : MonoBehaviour
     {
         if (!collision.CompareTag("Player")) return;
         playerNearby = false;
-        pressEUI.SetActive(false);
+        if (pressEUI != null)
+            pressEUI.SetActive(false);
     }
 }

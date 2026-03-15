@@ -5,23 +5,21 @@ using UnityEngine.SceneManagement;
 public class TransitionManager : MonoBehaviour
 {
     public static TransitionManager Instance;
-
     [SerializeField] Material transitionMaterial;
     [SerializeField] float duration = 1f;
-    [SerializeField] GameObject transitionCanvas; // ลาก TransitionShader GameObject มาใส่
-    public PlayerMovement2 player;
+    [SerializeField] GameObject transitionCanvas;
 
+    PlayerMovement2 player;
+    PlayerHealth2 playerHp;
+    public int Hp = 5;
     void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
-
-            // ทำให้ Canvas ไม่ถูก Destroy ด้วย
             if (transitionCanvas != null)
                 DontDestroyOnLoad(transitionCanvas);
-
             transitionMaterial.SetFloat("_Progress", 0f);
         }
         else Destroy(gameObject);
@@ -30,6 +28,44 @@ public class TransitionManager : MonoBehaviour
     void Start()
     {
         transitionMaterial.SetFloat("_Progress", 0f);
+        FindPlayer();
+    }
+
+    // หา Player ทุกครั้งที่ Load Scene ใหม่
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        FindPlayer();
+        transitionMaterial.SetFloat("_Progress", 0f);
+    }
+
+    void FindPlayer()
+    {
+        GameObject playerObj = GameObject.FindWithTag("Player");
+        if (playerObj != null)
+            player = playerObj.GetComponent<PlayerMovement2>();
+            playerHp = playerObj.GetComponent<PlayerHealth2>();
+
+        if (Hp > 0 && playerHp != null)
+        {
+            playerHp.currentHealth = Hp;
+            playerHp.healthUI.UpdateHearts(Hp); // อัพเดท UI ด้วย
+        }
+    }
+
+    void SetPlayerMove(bool canMove)
+    {
+        if (player != null)
+            player.iscanMove = canMove;
     }
 
     public void NextLevel()
@@ -38,47 +74,42 @@ public class TransitionManager : MonoBehaviour
         StartCoroutine(DoTransition(nextIndex));
     }
 
-    public void TeleportToBossRoom(string sceneName)
+    public void CurrentScene(string sceneName)
     {
         StartCoroutine(DoTransitionByName(sceneName));
     }
 
     IEnumerator DoTransition(int sceneIndex)
     {
-        // ดำก่อน
-        player.iscanMove = false;
+        SetPlayerMove(false);
+        Hp = playerHp.currentHealth;
         yield return StartCoroutine(Fade(0f, 255f));
 
-
-        // Load Scene
         AsyncOperation op = SceneManager.LoadSceneAsync(sceneIndex);
         op.allowSceneActivation = false;
-
         while (op.progress < 0.9f) yield return null;
-
         op.allowSceneActivation = true;
         yield return null;
-
-        // สว่าง
+        FindPlayer();
         yield return StartCoroutine(Fade(255f, 0f));
-        player.iscanMove = true;
+        SetPlayerMove(true);
     }
 
     IEnumerator DoTransitionByName(string sceneName)
     {
-        player.iscanMove = false;
+        SetPlayerMove(false);
+        Hp = playerHp.currentHealth;
         yield return StartCoroutine(Fade(0f, 255f));
 
         AsyncOperation op = SceneManager.LoadSceneAsync(sceneName);
         op.allowSceneActivation = false;
-
         while (op.progress < 0.9f) yield return null;
-
         op.allowSceneActivation = true;
+        FindPlayer();
         yield return null;
 
         yield return StartCoroutine(Fade(255f, 0f));
-        player.iscanMove = true;
+        SetPlayerMove(true);
     }
 
     IEnumerator Fade(float from, float to)
@@ -93,19 +124,16 @@ public class TransitionManager : MonoBehaviour
         }
         transitionMaterial.SetFloat("_Progress", to);
     }
+
     public IEnumerator FadeIn()
     {
-        Debug.Log("FadeIn START");
-        player.iscanMove = false;
+        SetPlayerMove(false);
         yield return StartCoroutine(Fade(0f, 255f));
-        Debug.Log("FadeIn END");
     }
 
     public IEnumerator FadeOut()
     {
-        Debug.Log("FadeOut START");
         yield return StartCoroutine(Fade(255f, 0f));
-        player.iscanMove = true;
-        Debug.Log("FadeOut END");
+        SetPlayerMove(true);
     }
 }
