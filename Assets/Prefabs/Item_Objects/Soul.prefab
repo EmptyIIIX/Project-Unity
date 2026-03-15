@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9093344343302304905}
   - component: {fileID: 3735513059878263389}
   - component: {fileID: 8491541141730771619}
+  - component: {fileID: -6906109913943074513}
   m_Layer: 0
   m_Name: Soul
   m_TagString: Untagged
@@ -81,8 +82,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 701580339318033094, guid: 104a3b8c76cb3744f890e2c07fc57d2d, type: 3}
-  m_Color: {r: 0.043137252, g: 0.6389576, b: 1, a: 1}
+  m_Sprite: {fileID: 8161708929401684021, guid: ff760af4a8c1ef041b32e60cac8568fa, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -141,3 +142,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Soul
   worth: 50
+--- !u!95 &-6906109913943074513
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8385422421322620633}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 5105774204582889850, guid: ff760af4a8c1ef041b32e60cac8568fa, type: 3}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
