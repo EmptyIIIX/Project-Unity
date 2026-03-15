@@ -11,7 +11,7 @@ public class PlayerHealth2 : MonoBehaviour
     public static event Action OnPlayerDied;
 
     //Iframe player
-    bool isImmune;
+    public bool isImmune;
     public float immuneTime = 1f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

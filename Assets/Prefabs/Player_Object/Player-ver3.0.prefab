@@ -411,6 +411,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement2
   rb: {fileID: 5265293679665759603}
   animator: {fileID: 909744103379950569}
+  playerHealth: {fileID: 2950925408449517505}
   moveSpeed: 5
   horizontalMovement: 0
   dashSpeed: 20
@@ -460,6 +461,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth2
   maxHealth: 3
   healthUI: {fileID: 0}
+  isImmune: 0
   immuneTime: 1
 --- !u!114 &6128915942035643010
 MonoBehaviour:
