@@ -9,6 +9,7 @@ public class TransitionManager : MonoBehaviour
     [SerializeField] Material transitionMaterial;
     [SerializeField] float duration = 1f;
     [SerializeField] GameObject transitionCanvas; // ลาก TransitionShader GameObject มาใส่
+    public PlayerMovement2 player;
 
     void Awake()
     {
@@ -45,7 +46,9 @@ public class TransitionManager : MonoBehaviour
     IEnumerator DoTransition(int sceneIndex)
     {
         // ดำก่อน
+        player.iscanMove = false;
         yield return StartCoroutine(Fade(0f, 255f));
+
 
         // Load Scene
         AsyncOperation op = SceneManager.LoadSceneAsync(sceneIndex);
@@ -58,10 +61,12 @@ public class TransitionManager : MonoBehaviour
 
         // สว่าง
         yield return StartCoroutine(Fade(255f, 0f));
+        player.iscanMove = true;
     }
 
     IEnumerator DoTransitionByName(string sceneName)
     {
+        player.iscanMove = false;
         yield return StartCoroutine(Fade(0f, 255f));
 
         AsyncOperation op = SceneManager.LoadSceneAsync(sceneName);
@@ -73,6 +78,7 @@ public class TransitionManager : MonoBehaviour
         yield return null;
 
         yield return StartCoroutine(Fade(255f, 0f));
+        player.iscanMove = true;
     }
 
     IEnumerator Fade(float from, float to)
@@ -89,11 +95,17 @@ public class TransitionManager : MonoBehaviour
     }
     public IEnumerator FadeIn()
     {
+        Debug.Log("FadeIn START");
+        player.iscanMove = false;
         yield return StartCoroutine(Fade(0f, 255f));
+        Debug.Log("FadeIn END");
     }
 
     public IEnumerator FadeOut()
     {
+        Debug.Log("FadeOut START");
         yield return StartCoroutine(Fade(255f, 0f));
+        player.iscanMove = true;
+        Debug.Log("FadeOut END");
     }
 }

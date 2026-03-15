@@ -23,6 +23,7 @@ public class PlayerMovement2 : MonoBehaviour
     [Header("Movement")]
     public float moveSpeed = 5;
     public float horizontalMovement;
+    public bool iscanMove = true;
 
     [Header("Dashing")]
     public float dashSpeed = 20f;
@@ -73,24 +74,27 @@ public class PlayerMovement2 : MonoBehaviour
     }
     void Update()
     {
-        if (isDashing) { return; }
-        if (PlayerAttack.Instance.isAttacking)
+        if (!iscanMove) { return; }
+        else
         {
-            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
-            return;
+            if (isDashing) { return; }
+            if (PlayerAttack.Instance.isAttacking)
+            {
+                rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+                return;
+            }
+            PlayerInput();
+            GroundCheck();
+            Gravity();
+            WallSlide();
+            WallJump();
+            if (!isWallJumping)
+            {
+                MoveHorizon();
+                Flip();
+            }
+            UpdateAnim();
         }
-        PlayerInput();
-        GroundCheck();
-        Gravity();
-        WallSlide();
-        WallJump();
-        if (!isWallJumping)
-        {
-            MoveHorizon();
-            Flip();
-        }
-        UpdateAnim();
-        
     }
     private void PlayerInput()
     {
