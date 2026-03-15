@@ -18,6 +18,7 @@ public class PlayerMovement2 : MonoBehaviour
     [Header("Reference")]
     public Rigidbody2D rb;
     public Animator animator;
+    public PlayerHealth2 playerHealth;
 
     [Header("Movement")]
     public float moveSpeed = 5;
@@ -132,6 +133,7 @@ public class PlayerMovement2 : MonoBehaviour
         Physics2D.IgnoreLayerCollision(20, 9, true);
         canDash = false;
         isDashing = true;
+        playerHealth.isImmune = true;
         animator.SetBool("isDashing?", true);
 
         float dashDirection = isFacingRight ? 1f : -1f;
@@ -146,6 +148,8 @@ public class PlayerMovement2 : MonoBehaviour
         Physics2D.IgnoreLayerCollision(20, 9, false);
 
         yield return new WaitForSeconds(dashCooldown);
+        
+        playerHealth.isImmune = false;
         canDash = true;
     }
 

@@ -41,6 +41,7 @@ public class EnemyGuardMovement : MonoBehaviour, IEnemy
     private bool inRange;
     private bool cooling;
     private float intTimer;
+    private bool isDie = false;
     #endregion
 
     //Lootable
@@ -188,11 +189,13 @@ public class EnemyGuardMovement : MonoBehaviour, IEnemy
 
     public void TakeDamage(int damage)
     {
+        if(isDie) { return; }
         currentHealth -= damage;
         StartCoroutine(FlashWhite());
         if(currentHealth <= 0)
         {
             //animator.SetTrigger("Die");
+            isDie = true;
             StartCoroutine(animDie());
         }
     }

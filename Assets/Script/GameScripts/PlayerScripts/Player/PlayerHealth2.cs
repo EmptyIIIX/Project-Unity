@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using UnityEngine;
-using static PlayerManager;
 
 public class PlayerHealth2 : MonoBehaviour
 {
@@ -10,18 +9,11 @@ public class PlayerHealth2 : MonoBehaviour
     public HealthUI healthUI;
     private SpriteRenderer spriteRenderer;
     public static event Action OnPlayerDied;
-    private DamgeFlash _damgeFlash;
 
-    bool isImmune;
+    //Iframe player
+    public bool isImmune;
     public float immuneTime = 1f;
-    [Header("Damage VFX")]
-    public ParticleSystem damageVFXPrefab;
-    //private Vector3 startPosition;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    private void Awake()
-    {
-        _damgeFlash = GetComponent<DamgeFlash>();
-    }
     void Start()
     {
         ResetHealth();
@@ -68,7 +60,6 @@ public class PlayerHealth2 : MonoBehaviour
 
         currentHealth -= damage;
         healthUI.UpdateHearts(currentHealth);
-        _damgeFlash.CallDamgeFlash();
 
         StartCoroutine(ImmuneCoroutine());
         //StartCoroutine(FlashRed());
@@ -88,16 +79,22 @@ public class PlayerHealth2 : MonoBehaviour
 
         while (timer < immuneTime)
         {
-            //spriteRenderer.color = Color.red; 
+            spriteRenderer.color = Color.red;
             yield return new WaitForSeconds(0.1f);
-            //spriteRenderer.color = Color.white;
+            spriteRenderer.color = Color.white;
             yield return new WaitForSeconds(0.1f);
 
             timer += 0.2f;
         }
 
-        //spriteRenderer.color = Color.white;
+        spriteRenderer.color = Color.white;
         isImmune = false;
     }
 
+    //private IEnumerator FlashRed()
+    //{
+    //    spriteRenderer.color = Color.red;
+    //    yield return new WaitForSeconds(0.5f);
+    //    spriteRenderer.color = Color.white;
+    //}
 }
