@@ -87,4 +87,13 @@ public class TransitionManager : MonoBehaviour
         }
         transitionMaterial.SetFloat("_Progress", to);
     }
+    public IEnumerator FadeIn()
+    {
+        yield return StartCoroutine(Fade(0f, 255f));
+    }
+
+    public IEnumerator FadeOut()
+    {
+        yield return StartCoroutine(Fade(255f, 0f));
+    }
 }
