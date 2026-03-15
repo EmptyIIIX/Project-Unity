@@ -2525,6 +2525,10 @@ PrefabInstance:
       propertyPath: healthUI
       value: 
       objectReference: {fileID: 477042389}
+    - target: {fileID: 3366567582874914805, guid: 7c5db5fdedfbf344a83d3b157ab452de, type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5020870423006400502, guid: 7c5db5fdedfbf344a83d3b157ab452de, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
