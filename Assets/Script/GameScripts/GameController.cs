@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,6 +10,7 @@ public class GameController : MonoBehaviour
     public GameObject player;
     public GameObject LoadCanvas;
     public List<GameObject> levels;
+    public Transform SpawnPoint;
     private int currentLevelIndex = 0;
     public GameObject gameOverScreen;
     public static event Action OnReset;
@@ -28,6 +28,7 @@ public class GameController : MonoBehaviour
         if (LoadCanvas != null) LoadCanvas.SetActive(false);
         if (gameOverScreen != null) gameOverScreen.SetActive(false);
 
+        SpawnPoint = GetComponent<Transform>();
     }
 
     // Unsubscribe ทุก Event ตอน Destroy
@@ -65,6 +66,31 @@ public class GameController : MonoBehaviour
         Time.timeScale = 1;
     }
 
+    public void Respawn()
+    {
+        if (gameOverScreen != null)
+            gameOverScreen.SetActive(false);
+
+        Time.timeScale = 1f;
+
+        if (LoadCanvas != null) LoadCanvas.SetActive(false);
+        if (levels[currentLevelIndex] != null)
+        {
+            levels[currentLevelIndex].gameObject.SetActive(false);
+            levels[currentLevelIndex].gameObject.SetActive(true);
+        }
+
+        if (player != null)
+        {
+            Vector3 spawnPos = SpawnPoint != null ? SpawnPoint.position : Vector3.zero;
+            if (CheckpointManager.Instance != null)
+                spawnPos = CheckpointManager.Instance.GetRespawnPoint(spawnPos);
+            player.transform.position = spawnPos;
+        }
+
+        OnReset?.Invoke();
+    }
+
     void IncreaseProgressSoulAmount(int amount)
     {
         progressSoulAmount += amount;
@@ -87,8 +113,8 @@ public class GameController : MonoBehaviour
             levels[level].gameObject.SetActive(true);
 
         currentLevelIndex = level;
-        //if (player != null)
-        //    player.transform.position = SpawnPoint.transform.position;
+        if (player != null)
+            player.transform.position = SpawnPoint.transform.position;
     }
 
     void LoadNextLevel()
