@@ -35,7 +35,7 @@ public class EnemyGuardMovement : MonoBehaviour, IEnemy
     #region private Variables
     private RaycastHit2D hit;
     private Transform target;
-    private Animator animator;
+    public Animator animator;
     private float distance;
     private bool attackMode;
     private bool inRange;
