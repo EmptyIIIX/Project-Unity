@@ -62,6 +62,7 @@ public class PlayerAttack : MonoBehaviour
             return;
         }
 
+        
         isAttacking = true;
 
         Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPosition.position, attackRange, EnemiesLayer);

@@ -3,6 +3,7 @@ using UnityEngine;
 public class BossStateAnimation : MonoBehaviour
 {
     Animator animator;
+    AudioManager audioManager;
 
     public enum BossState
     {
@@ -17,6 +18,11 @@ public class BossStateAnimation : MonoBehaviour
     }
 
     public BossState currentState;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     void Start()
     {
@@ -34,14 +40,17 @@ public class BossStateAnimation : MonoBehaviour
                 break;
 
             case BossState.attack1:
+                audioManager.BossSFX(audioManager.BossAttack1);
                 animator.SetTrigger("attack1");
                 break;
 
             case BossState.attack2:
+                audioManager.BossSFX(audioManager.BossAttack2);
                 animator.SetTrigger("attack2");
                 break;
 
             case BossState.attack3:
+                audioManager.BossSFX(audioManager.BossAttack3);
                 animator.SetTrigger("attack3");
                 break;
 
@@ -50,14 +59,17 @@ public class BossStateAnimation : MonoBehaviour
                 break;
 
             case BossState.attack4:
+                audioManager.BossSFX(audioManager.BossAttack4);
                 animator.SetTrigger("attack4");
                 break;
 
             case BossState.Teleport:
+                audioManager.BossSFX(audioManager.BossTeleport);
                 animator.SetTrigger("teleport");
                 break;
 
             case BossState.Dead:
+                audioManager.BossSFX(audioManager.BossDead);
                 animator.SetTrigger("Die");
                 break;
         }

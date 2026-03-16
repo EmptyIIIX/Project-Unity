@@ -5,7 +5,7 @@ using UnityEngine.Rendering.Universal;
 
 public class PlayerMovement2 : MonoBehaviour
 {
-
+    AudioManager audioManager;
     enum PlayerStateMovement
     {
         Idle,
@@ -67,6 +67,10 @@ public class PlayerMovement2 : MonoBehaviour
     float wallJumpDirection;
     float wallJumpTimer;
 
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
     // Update is called once per frame
     void Start()
     {
@@ -143,6 +147,7 @@ public class PlayerMovement2 : MonoBehaviour
         canDash = false;
         isDashing = true;
         playerHealth.isImmune = true;
+        audioManager.PlayerSFX(audioManager.PlayerDash);
         animator.SetBool("isDashing?", true);
         dashGhost.StartAfterimage();
 
@@ -189,6 +194,7 @@ public class PlayerMovement2 : MonoBehaviour
         {
             if (context.performed)
             {
+                audioManager.PlayerSFX(audioManager.PlayerJump);
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
                 jumpRemaining--;
             }
@@ -286,6 +292,7 @@ public class PlayerMovement2 : MonoBehaviour
         //jumping
         if (rb.linearVelocity.y != 0)
         {
+            
             animator.SetBool("isJump", true);
         }
         else

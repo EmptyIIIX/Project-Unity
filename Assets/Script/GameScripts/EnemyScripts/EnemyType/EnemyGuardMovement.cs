@@ -16,6 +16,7 @@ public class EnemyGuardMovement : MonoBehaviour, IEnemy
     public int maxhealth = 3;
     [SerializeField] private int currentHealth;
     private SpriteRenderer spriteRenderer;
+    AudioManager audioManager;
     private Color ogColor;
     #endregion
 
@@ -49,6 +50,7 @@ public class EnemyGuardMovement : MonoBehaviour, IEnemy
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = rb.GetComponent<SpriteRenderer>();
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
         currentHealth = maxhealth;
         ogColor = spriteRenderer.color;
     }
@@ -211,6 +213,8 @@ public class EnemyGuardMovement : MonoBehaviour, IEnemy
         animator.SetTrigger("Die");
 
         yield return new WaitForSeconds(1f);
+
+        audioManager.PlayerSFX(audioManager.PlayerDead);
 
         Die();
     }

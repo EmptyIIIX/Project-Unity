@@ -447,14 +447,14 @@ public class BossDecision : MonoBehaviour
         
         Debug.Log("jumpattack is active");
     }
+    public void StrikeGround()
+    {
+        Debug.Log("Strike ground is active");
+    }
     public void Attack4()
     {
         BossTransform.position = centerPointAttack.position;
         Debug.Log("attack4 is active");
-    }
-    public void ResetSkill4()
-    {
-
     }
     public void ChasePlayer()
     {

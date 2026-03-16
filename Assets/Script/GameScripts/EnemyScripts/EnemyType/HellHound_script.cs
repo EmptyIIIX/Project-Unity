@@ -9,6 +9,7 @@ public class HellHound_script : MonoBehaviour, IEnemy
     public Animator animator;
     SpriteRenderer spriteRenderer;
     public Rigidbody2D hellhoundRB;
+    AudioManager audioManager;
     private Color ogColor;
 
     public int currentHealth;
@@ -18,6 +19,11 @@ public class HellHound_script : MonoBehaviour, IEnemy
     public float waitToChangePoint = 2f;
 
     Transform targetPoint;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     void Start()
     {
@@ -75,6 +81,8 @@ public class HellHound_script : MonoBehaviour, IEnemy
         animator.SetTrigger("die");
 
         yield return new WaitForSeconds(1f);
+
+        audioManager.PlayerSFX(audioManager.PlayerDead);
 
         Die();
     }
