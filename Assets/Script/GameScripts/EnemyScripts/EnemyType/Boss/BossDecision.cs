@@ -11,6 +11,7 @@ public class BossDecision : MonoBehaviour
     public CapsuleCollider2D capsuleCollider;
     public GameObject FlashEffect;
     public BossFlashFade flashFade;
+    AudioManager audioManager;
 
     public float attackDelay = 2f;
     private bool isAttacking;
@@ -59,6 +60,10 @@ public class BossDecision : MonoBehaviour
 
     #endregion
 
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -447,14 +452,15 @@ public class BossDecision : MonoBehaviour
         
         Debug.Log("jumpattack is active");
     }
+    public void StrikeGround()
+    {
+        audioManager.BossSFX(audioManager.BossDown);
+        Debug.Log("Strike ground is active");
+    }
     public void Attack4()
     {
         BossTransform.position = centerPointAttack.position;
         Debug.Log("attack4 is active");
-    }
-    public void ResetSkill4()
-    {
-
     }
     public void ChasePlayer()
     {

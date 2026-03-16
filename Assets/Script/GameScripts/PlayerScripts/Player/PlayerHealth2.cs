@@ -10,6 +10,7 @@ public class PlayerHealth2 : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private PlayerMovement2 movement2;
     public static event Action OnPlayerDied;
+    [SerializeField] private DamageVFX damageVFX;
 
     //Iframe player
     public bool isImmune;
@@ -63,6 +64,7 @@ public class PlayerHealth2 : MonoBehaviour
         if(isImmune || isPlayerDie) return;
 
         currentHealth -= damage;
+        damageVFX.PlayDamageVFX();
         healthUI.UpdateHearts(currentHealth);
 
         StartCoroutine(ImmuneCoroutine());

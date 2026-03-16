@@ -47,4 +47,4 @@ MonoBehaviour:
   damageMaterial: {fileID: 2100000, guid: bad46a3874eb8e94caabbcc8b40f9f38, type: 2}
   player: {fileID: 0}
   pulseSpeed: 1
-  maxPower: 8
+  maxPower: 5

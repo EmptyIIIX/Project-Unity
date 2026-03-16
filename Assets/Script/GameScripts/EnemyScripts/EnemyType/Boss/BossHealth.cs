@@ -5,14 +5,21 @@ public class BossHealth : MonoBehaviour, IEnemy
 {
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Animator animator;
+    [SerializeField]  FadeManager fadeManager;
     public int maxHealth = 30;
     public int currentHealth;
     private SpriteRenderer spriteRenderer;
     private Color ogColor;
+    AudioManager audioManager;
 
     public bool isDie;
 
     BossStateAnimation stateAnimation;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     void Start()
     {
@@ -56,6 +63,10 @@ public class BossHealth : MonoBehaviour, IEnemy
             animator.GetCurrentAnimatorStateInfo(0).IsName("boss_die") &&
             animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.99f
         );
+
+        audioManager.PlayerSFX(audioManager.PlayerDead);
+
+        fadeManager.LoadSceneByName("MainMenu");
 
         Destroy(gameObject);
     }
