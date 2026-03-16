@@ -9,18 +9,13 @@ public class PlayerHealth2 : MonoBehaviour
     public HealthUI healthUI;
     private SpriteRenderer spriteRenderer;
     private PlayerMovement2 movement2;
-    AudioManager audioManager;
     public static event Action OnPlayerDied;
+    [SerializeField] private DamageVFX damageVFX;
 
     //Iframe player
     public bool isImmune;
     public float immuneTime = 1f;
     public bool isPlayerDie = false;
-
-    private void Awake()
-    {
-        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
-    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -69,7 +64,7 @@ public class PlayerHealth2 : MonoBehaviour
         if(isImmune || isPlayerDie) return;
 
         currentHealth -= damage;
-        audioManager.PlayerSFX(audioManager.PlayerHit);
+        damageVFX.PlayDamageVFX();
         healthUI.UpdateHearts(currentHealth);
 
         StartCoroutine(ImmuneCoroutine());
@@ -85,7 +80,6 @@ public class PlayerHealth2 : MonoBehaviour
 
     IEnumerator AnimationDie()
     {
-        audioManager.PlayerSFX(audioManager.PlayerDead);
         movement2.animator.SetTrigger("die");
         movement2.rb.linearVelocity = new Vector2(0f, 0f);
 
