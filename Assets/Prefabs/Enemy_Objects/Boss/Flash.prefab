@@ -126,4 +126,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd55dc5ee8687544e9c8c1646229b9cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossFlashFade
-  Direction: 1
+  Direction: -1
