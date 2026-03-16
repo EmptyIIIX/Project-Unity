@@ -1,8 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using NUnit.Framework;
-using UnityEditor.SearchService;
-using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class EnemyGuardMovement : MonoBehaviour, IEnemy
