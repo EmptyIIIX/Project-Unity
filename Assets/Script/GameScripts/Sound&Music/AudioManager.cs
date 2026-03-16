@@ -23,6 +23,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip BossAttack2;
     public AudioClip BossAttack3;
     public AudioClip BossJumpAttack;
+    public AudioClip BossDown;
     public AudioClip BossAttack4;
     public AudioClip BossDead;
     public AudioClip BossTeleport;

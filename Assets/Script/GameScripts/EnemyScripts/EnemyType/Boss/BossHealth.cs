@@ -5,6 +5,7 @@ public class BossHealth : MonoBehaviour, IEnemy
 {
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Animator animator;
+    [SerializeField]  FadeManager fadeManager;
     public int maxHealth = 30;
     public int currentHealth;
     private SpriteRenderer spriteRenderer;
@@ -64,6 +65,8 @@ public class BossHealth : MonoBehaviour, IEnemy
         );
 
         audioManager.PlayerSFX(audioManager.PlayerDead);
+
+        fadeManager.LoadSceneByName("MainMenu");
 
         Destroy(gameObject);
     }

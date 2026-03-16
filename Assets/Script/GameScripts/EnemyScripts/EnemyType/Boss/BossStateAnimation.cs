@@ -55,6 +55,7 @@ public class BossStateAnimation : MonoBehaviour
                 break;
 
             case BossState.jumpAttack:
+                audioManager.BossSFX(audioManager.BossJumpAttack);
                 animator.SetTrigger("jumpAttack");
                 break;
 
