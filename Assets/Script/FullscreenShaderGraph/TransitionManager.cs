@@ -29,7 +29,7 @@ public class TransitionManager : MonoBehaviour
     {
         transitionMaterial.SetFloat("_Progress", 0f);
         FindPlayer();
-        Hp = playerHp.currentHealth;//                      have fixed
+        Hp = playerHp.maxHealth;//                      have fixed
     }
 
     // หา Player ทุกครั้งที่ Load Scene ใหม่
