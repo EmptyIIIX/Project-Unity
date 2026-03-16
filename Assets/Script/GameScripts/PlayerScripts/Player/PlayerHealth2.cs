@@ -16,11 +16,12 @@ public class PlayerHealth2 : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        ResetHealth();
-
+        //ResetHealth();
         spriteRenderer = GetComponent<SpriteRenderer>();
         GameController.OnReset += ResetHealth;
         HoldToLoadLevel.OnHoldComplete += Heal;
+        healthUI.SetMaxHearts(maxHealth);
+        healthUI.UpdateHearts(currentHealth);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -11,7 +11,7 @@ public class TransitionManager : MonoBehaviour
 
     PlayerMovement2 player;
     PlayerHealth2 playerHp;
-    public int Hp = 5;
+    [SerializeField]private int Hp;//                      have fixed
     void Awake()
     {
         if (Instance == null)
@@ -29,6 +29,7 @@ public class TransitionManager : MonoBehaviour
     {
         transitionMaterial.SetFloat("_Progress", 0f);
         FindPlayer();
+        Hp = playerHp.currentHealth;//                      have fixed
     }
 
     // หา Player ทุกครั้งที่ Load Scene ใหม่

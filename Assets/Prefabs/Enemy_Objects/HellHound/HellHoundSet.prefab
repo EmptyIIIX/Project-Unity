@@ -269,6 +269,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7046667103944089795}
   - component: {fileID: 4246901597819701656}
+  - component: {fileID: 4540610324371291942}
   m_Layer: 9
   m_Name: hellhound_collider
   m_TagString: Untagged
@@ -328,3 +329,16 @@ CapsuleCollider2D:
   m_Offset: {x: 0.18750015, y: -0.112497546}
   m_Size: {x: 0.8749969, y: 1.6749972}
   m_Direction: 0
+--- !u!114 &4540610324371291942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8440960573882605855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffd9477f5e07f7344ad5c8595605bb73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyAttackHitbox
+  Damage: 1

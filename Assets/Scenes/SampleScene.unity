@@ -2150,6 +2150,10 @@ PrefabInstance:
       propertyPath: isDie
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6528282746031148668, guid: 29dc0ee3e5bded147a2dd9b4822356c1, type: 3}
+      propertyPath: maxHealth
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 8136591524005758748, guid: 29dc0ee3e5bded147a2dd9b4822356c1, type: 3}
       propertyPath: m_Name
       value: BossPhase1.1
@@ -2173,11 +2177,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6867454326809154902, guid: f37636a0be12bb24d828f8636c2ede67, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.4982
+      value: 4.585032
       objectReference: {fileID: 0}
     - target: {fileID: 6867454326809154902, guid: f37636a0be12bb24d828f8636c2ede67, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.14491
+      value: 4.14544
       objectReference: {fileID: 0}
     - target: {fileID: 6867454326809154902, guid: f37636a0be12bb24d828f8636c2ede67, type: 3}
       propertyPath: m_LocalPosition.z
