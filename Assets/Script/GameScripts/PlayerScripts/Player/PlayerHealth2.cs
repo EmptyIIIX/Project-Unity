@@ -8,16 +8,19 @@ public class PlayerHealth2 : MonoBehaviour
     public int currentHealth;
     public HealthUI healthUI;
     private SpriteRenderer spriteRenderer;
+    private PlayerMovement2 movement2;
     public static event Action OnPlayerDied;
 
     //Iframe player
     public bool isImmune;
     public float immuneTime = 1f;
+    public bool isPlayerDie = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         //ResetHealth();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        movement2 = GetComponent<PlayerMovement2>();
         GameController.OnReset += ResetHealth;
         HoldToLoadLevel.OnHoldComplete += Heal;
         healthUI.SetMaxHearts(maxHealth);
@@ -57,7 +60,7 @@ public class PlayerHealth2 : MonoBehaviour
 
     private void TakeDamage(int damage)
     {
-        if(isImmune) return;
+        if(isImmune || isPlayerDie) return;
 
         currentHealth -= damage;
         healthUI.UpdateHearts(currentHealth);
@@ -68,8 +71,25 @@ public class PlayerHealth2 : MonoBehaviour
         if(currentHealth <= 0)
         {
             //player dead
-            OnPlayerDied.Invoke();
+            isPlayerDie = true;
+            StartCoroutine(AnimationDie());
         }
+    }
+
+    IEnumerator AnimationDie()
+    {
+        movement2.animator.SetTrigger("die");
+        movement2.rb.linearVelocity = new Vector2(0f, 0f);
+
+        yield return null;
+
+        yield return new WaitUntil(() =>
+            movement2.animator.GetCurrentAnimatorStateInfo(0).IsName("Die") &&
+            movement2.animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.95f
+        );
+
+        isPlayerDie = false;
+        OnPlayerDied.Invoke();
     }
 
     private IEnumerator ImmuneCoroutine()

@@ -74,7 +74,7 @@ public class PlayerMovement2 : MonoBehaviour
     }
     void Update()
     {
-        if (!iscanMove) { return; }
+        if (!iscanMove || playerHealth.isPlayerDie) { return; }
         else
         {
             if (isDashing) { return; }
